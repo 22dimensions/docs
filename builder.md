@@ -9,6 +9,5 @@
  - the core is BuildAndUploadSpaceImages (SpaceCodeChange)
  - base image + tpl
  - text/template 文本生成 (https://golangdocs.com/templates-in-golang)
- - from 镜像（cpu npu xxx）
  - https://docs.docker.com/glossary/#registry
  - https://docs.docker.com/docker-hub/mirror/#configure-the-docker-daemon
