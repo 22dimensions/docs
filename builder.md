@@ -7,7 +7,6 @@
 
 
  - the core is BuildAndUploadSpaceImages (SpaceCodeChange)
- - git lfs vs normal git file
  - base image + tpl
  - text/template 文本生成 (https://golangdocs.com/templates-in-golang)
  - from 镜像（cpu npu xxx）
