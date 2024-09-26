@@ -1,0 +1,42 @@
+{
+    "openmind-cpu": [
+      {
+        "openmind_version": "0.8",
+        "os_name": "openeuler",
+        "python_tag": "3.9-openeuler22.03",
+        "framework": "ms",
+        "tags": [
+          "openeuler-python3.9-mindspore2.3.1-openmind0.8.0"
+        ]
+      },
+      {
+        "openmind_version": "0.8.0",
+        "os_name": "openeuler",
+        "python_tag": "3.9-openeuler22.03",
+        "framework": "pt-cpu",
+        "tags": [
+          "openeuler-python3.9-pytorch2.1.0-openmind0.8.0"
+        ]
+      }
+    ],
+    "openmind-npu": [
+      {
+        "openmind_version": "0.8.0",
+        "os_name": "openeuler",
+        "cann_tag": "8.0.rc2-910b-openeuler22.03-py3.9",
+        "framework": "ms",
+        "tags": [
+          "openeuler-python3.9-cann8.0.rc2.beta1-mindspore2.3.1-openmind0.8.0"
+        ]
+      },
+      {
+        "openmind_version": "0.8.0",
+        "os_name": "openeuler",
+        "cann_tag": "8.0.rc2-910b-openeuler22.03-py3.9",
+        "framework": "pt",
+        "tags": [
+          "openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0"
+        ]
+      }
+    ]
+}
