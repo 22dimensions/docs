@@ -1,3 +1,15 @@
+cpu:
+python3.8-mindspore2.3.0rc1-openmind0.7.1
+python3.8-pytorch2.1.0-openmind0.7.1
+python3.9-mindspore2.3.1-openmind0.8.0
+python3.9-pytorch2.1.0-openmind0.8.0
+
+npu:
+python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1-openmind0.7.1
+python3.8-cann8.0.rc1.beta1-pytorch2.1.0-openmind0.7.1
+python3.9-cann8.0.rc2.beta1-mindspore2.3.1-openmind0.8.0
+python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0
+
 {
     "openmind-cpu": [
       {
