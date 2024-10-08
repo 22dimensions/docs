@@ -1,90 +1,349 @@
-cpu:
-python3.8-mindspore2.3.0rc1-openmind0.7.1
-python3.8-pytorch2.1.0-openmind0.7.1
-python3.9-mindspore2.3.1-openmind0.8.0
-python3.9-pytorch2.1.0-openmind0.8.0
-
-npu:
-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1-openmind0.7.1
-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-openmind0.7.1
-python3.9-cann8.0.rc2.beta1-mindspore2.3.1-openmind0.8.0
-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0
-
 {
-    "openmind-cpu": [
-      {
-        "openmind_version": "0.7.1",
-        "os_name": "openeuler",
-        "python_tag": "3.8-openeuler22.03",
-        "framework": "ms",
-        "tags": [
-          "openeuler-python3.8-mindspore2.3.0rc1-openmind0.7.1"
-        ]
-      },
-      {
-        "openmind_version": "0.7.1",
-        "os_name": "openeuler",
-        "python_tag": "3.8-openeuler22.03",
-        "framework": "pt-cpu",
-        "tags": [
-          "openeuler-python3.8-pytorch2.1.0-openmind0.7.1"
-        ]
-      },
-      {
-        "openmind_version": "0.8",
-        "os_name": "openeuler",
-        "python_tag": "3.9-openeuler22.03",
-        "framework": "ms",
-        "tags": [
-          "openeuler-python3.9-mindspore2.3.1-openmind0.8.0"
-        ]
-      },
-      {
-        "openmind_version": "0.8.0",
-        "os_name": "openeuler",
-        "python_tag": "3.9-openeuler22.03",
-        "framework": "pt-cpu",
-        "tags": [
-          "openeuler-python3.9-pytorch2.1.0-openmind0.8.0"
-        ]
-      }
-    ],
-    "openmind-npu": [
-      {
-        "openmind_version": "0.7.1",
-        "os_name": "openeuler",
-        "cann_tag": "8.0.rc1-910b-openeuler22.03-py3.8",
-        "framework": "ms",
-        "tags": [
-          "openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1-openmind0.7.1"
-        ]
-      },
-      {
-        "openmind_version": "0.7.1",
-        "os_name": "openeuler",
-        "cann_tag": "8.0.rc1-910b-openeuler22.03-py3.8",
-        "framework": "pt",
-        "tags": [
-          "openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-openmind0.7.1"
-        ]
-      },
-      {
-        "openmind_version": "0.8.0",
-        "os_name": "openeuler",
-        "cann_tag": "8.0.rc2-910b-openeuler22.03-py3.9",
-        "framework": "ms",
-        "tags": [
-          "openeuler-python3.9-cann8.0.rc2.beta1-mindspore2.3.1-openmind0.8.0"
-        ]
-      },
-      {
-        "openmind_version": "0.8.0",
-        "os_name": "openeuler",
-        "cann_tag": "8.0.rc2-910b-openeuler22.03-py3.9",
-        "framework": "pt",
-        "tags": [
-          "openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0"
-        ]
-      }
+    "base_image": [
+        {
+            "name": "CANN",
+            "label": ["CANN"],
+            "description": "CANN（Compute Architecture for Neural Networks）是华为针对AI场景推出的异构计算架构，对上支持多种AI框架，对下服务AI处理器与编程，发挥承上启下的关键作用，是提升昇腾AI处理器计算效率的关键平台。同时针对多样化应用场景，提供高效易用的编程接口，支持用户快速构建基于昇腾平台的AI应用和业务",
+            "update_time": "2024/08/22",
+            "base_info": {
+                "os": ["openEuler"],
+                "arch": ["aarch64"],
+                "type": "基础镜像"
+            },
+            "quick_start": "/docs/cann_quick_start.md",
+            "how_to_use": "/docs/cann_how_to_use.md",
+            "docker_pull_command": "docker pull registry.modelers.cn/base_image/cann",
+            "tags": [
+                {
+                    "version": "latest",
+                    "update_time": "2024/09/26",
+                    "size": "3.2 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/cann",
+                    "manifest": [
+                        {
+                            "hash": "sha256:d15f60358046fe998987a65b2fc848ef69d6f1a65392ed825a250ef602ccccfb",
+                            "os_arch": "Ubuntu/aarch64",
+                            "size": "3.2 GB",
+                            "update_time": "2024/09/26"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/cann",
+                    "hardware" : "NPU"
+                },
+                {
+                    "version": "ubuntu-python3.9-cann8.0.rc3.alpha002",
+                    "update_time": "2024/09/26",
+                    "size": "3.1 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/cann:ubuntu-python3.9-cann8.0.rc3.alpha002",
+                    "manifest": [
+                        {
+                            "hash": "sha256:d15f60358046fe998987a65b2fc848ef69d6f1a65392ed825a250ef602ccccfb",
+                            "os_arch": "Ubuntu/aarch64",
+                            "size": "3.1 GB",
+                            "update_time": "2024/09/26"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/cann:ubuntu-python3.9-cann8.0.rc3.alpha002",
+                    "hardware" : "NPU"
+                },
+                {
+                    "version": "openeuler-python3.8-cann8.0.rc1.beta1",
+                    "update_time": "2024/08/22",
+                    "size": "3.2 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/cann:openeuler-python3.8-cann8.0.rc1.beta1",
+                    "manifest": [
+                        {
+                            "hash": "sha256:d15f60358046fe998987a65b2fc848ef69d6f1a65392ed825a250ef602ccccfb",
+                            "os_arch": "openEuler/aarch64",
+                            "size": "3.2GB",
+                            "update_time": "2024/08/22"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/cann:openeuler-python3.8-cann8.0.rc1.beta1",
+                    "hardware" : "NPU"
+                }
+            ]
+        },
+        {
+            "name": "PyTorch",
+            "label": ["PyTorch"],
+            "description": "PyTorch是一个开源的Python机器学习库，基于Torch库，底层由C++实现，应用于人工智能领域，如计算机视觉和自然语言处理。它最初由Meta Platforms的人工智能研究团队开发，现在属于Linux基金会的一部分。它是在修改后的BSD许可证下发布的自由及开放源代码软件。",
+            "update_time": "2024/08/22",
+            "base_info": {
+                "os": ["openEuler"],
+                "arch": ["aarch64", "amd64"],
+                "type": "基础镜像"
+            },
+            "quick_start": "/docs/torch_quick_start.md",
+            "how_to_use": "/docs/torch_how_to_use.md",
+            "docker_pull_command": "docker pull registry.modelers.cn/base_image/pytorch",
+            "tags": [
+                {
+                    "version": "ubuntu-python3.8-cann8.0.rc1.beta1-pytorch2.2.0",
+                    "update_time": "2024/08/22",
+                    "size": "3.3 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/pytorch:ubuntu-python3.8-cann8.0.rc1.beta1-pytorch2.2.0",
+                    "manifest": [
+                        {
+                            "hash": "sha256:0d04d69e0178a2d788d4c2e1282576b01170616a584466862fffa98431c7eb93",
+                            "os_arch": "Ubuntu/aarch64",
+                            "size": "3.3GB",
+                            "update_time": "2024/09/26"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/pytorch:ubuntu-python3.8-cann8.0.rc1.beta1-pytorch2.2.0",
+                    "hardware" : "NPU"
+                },
+                {
+                    "version": "openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0",
+                    "update_time": "2024/08/22",
+                    "size": "3.3 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/pytorch:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0",
+                    "manifest": [
+                        {
+                            "hash": "sha256:ebdfeed17fb39479859ed8debdd11093ec1d3915a80ccdcfb65ef2481b6fc69c",
+                            "os_arch": "openEuler/aarch64",
+                            "size": "3.3GB",
+                            "update_time": "2024/08/22"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/pytorch:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0",
+                    "hardware" : "NPU"
+                }
+            ]
+        },
+        {
+            "name": "MindSpore",
+            "label": ["MindSpore"],
+            "description": "昇思MindSpore是一个全场景深度学习框架，旨在实现易开发、高效执行、全场景统一部署三大目标。其中易开发表现为API友好，调试难度低；高效执行包括计算效率、数据预处理效率和分布式训练效率；全场景则指框架同时支持云、边缘以及端侧场景。",
+            "update_time": "2024/08/22",
+            "base_info": {
+                "os": ["openEuler"],
+                "arch": ["aarch64", "amd64"],
+                "type": "基础镜像"
+            },
+            "quick_start": "/docs/mindspore_quick_start.md",
+            "how_to_use": "/docs/mindspore_how_to_use.md",
+            "docker_pull_command": "docker pull registry.modelers.cn/base_image/mindspore",
+            "tags": [
+                {
+                    "version": "openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1",
+                    "update_time": "2024/08/22",
+                    "size": "3.4 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/mindspore:openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1",
+                    "manifest": [
+                        {
+                            "hash": "sha256:625f1c94dc349f27e3ed25e6bf49d159c2bf581fab0e160d21cb7e8e3aeaf2c6",
+                            "os_arch": "openEuler/aarch64",
+                            "size": "3.4GB",
+                            "update_time": "2024/08/22"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/mindspore:openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1",
+                    "hardware" : "NPU"
+                }
+            ]
+        },
+        {
+            "name": "openMind",
+            "label": ["PyTorch", "MindSpore"],
+            "description": "openMind Library是一个开源的深度学习开发套件，支持从模型训练到部署的全流程，原生兼容PyTorch和MindSpore等主流框架",
+            "update_time": "2024/08/22",
+            "base_info": {
+                "os": ["openEuler"],
+                "arch": ["aarch64", "amd64"],
+                "type": "基础镜像"
+            },
+            "quick_start": "/docs/openmind_quick_start.md",
+            "how_to_use": "/docs/openmind_how_to_use.md",
+            "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind",
+            "tags": [
+                {
+                    "version": "latest",
+                    "update_time": "2024/09/25",
+                    "size": "4.0 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind",
+                    "manifest": [
+                        {
+                            "hash": "sha256:c3b51057d5c1962e1c3fc13a10d7c082b08102137e9d3f77f6621a1ad7c4ad20",
+                            "os_arch": "openEuler/aarch64",
+                            "size": "4.0 GB",
+                            "update_time": "2024/09/25"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/openmind",
+                    "hardware" : "NPU"
+                },
+                {
+                    "version": "openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-mindspore2.3.1-openmind0.8.0",
+                    "update_time": "2024/09/26",
+                    "size": "4.0 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-mindspore2.3.1-openmind0.8.0",
+                    "manifest": [
+                        {
+                            "hash": "sha256:c3b51057d5c1962e1c3fc13a10d7c082b08102137e9d3f77f6621a1ad7c4ad20",
+                            "os_arch": "openEuler/aarch64",
+                            "size": "4.0 GB",
+                            "update_time": "2024/09/26"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-mindspore2.3.1-openmind0.8.0",
+                    "hardware" : "NPU"
+                },
+                {
+                    "version": "openeuler-python3.9-mindspore2.3.1-openmind0.8.0",
+                    "update_time": "2024/09/25",
+                    "size": "1.4 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.9-mindspore2.3.1-openmind0.8.0",
+                    "manifest": [
+                        {
+                            "hash": "sha256:829928e49091590ad090644822297ce11c4f8663130c4c24a0763a6ca59fc5d5",
+                            "os_arch": "openEuler/amd64",
+                            "size": "1.4 GB",
+                            "update_time": "2024/08/22"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.9-mindspore2.3.1-openmind0.8.0",
+                    "hardware" : "CPU"
+                },
+                {
+                    "version": "openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0",
+                    "update_time": "2024/09/25",
+                    "size": "3.6 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0",
+                    "manifest": [
+                        {
+                            "hash": "sha256:e3a1677044bb1397cd87be4f3fa73aeaef3909797e3572d3344dfff560da899e",
+                            "os_arch": "openEuler/aarch64",
+                            "size": "3.6 GB",
+                            "update_time": "2024/08/22"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0",
+                    "metadata" : {
+                        "model_ci" : "false",
+                        "space": "true",
+                        "hardware_version" : "NPU",
+                        "python_version": "3.9",
+                        "openmind_version": "0.8.0",
+                        "framework" : "pytorch",
+                        "framework_version" : "2.1.0",
+                        "cann_version" : "8.0.rc2.beta1"
+                    }
+                },
+                {
+                    "version": "openeuler-python3.9-pytorch2.1.0-openmind0.8.0",
+                    "update_time": "2024/09/25",
+                    "size": "732.0 MB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.9-pytorch2.1.0-openmind0.8.0",
+                    "manifest": [
+                        {
+                            "hash": "sha256:4b3c1cbedec9ccff10b5858a754ed1ebcf58eb646931573c3bdfa696519b222b",
+                            "os_arch": "openEuler/amd64",
+                            "size": "732.0 MB",
+                            "update_time": "2024/08/22"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.9-pytorch2.1.0-openmind0.8.0",
+                    "hardware" : "CPU"
+                },
+                {
+                    "version": "openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-mindspore2.3.0rc1-openmind0.7.1",
+                    "update_time": "2024/08/22",
+                    "size": "3.7 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-mindspore2.3.0rc1-openmind0.7.1",
+                    "manifest": [
+                        {
+                            "hash": "sha256:f860fc05feaea2eec1ddd64b9101a057be3ea12bfd80f98951cf8ae64d30567c",
+                            "os_arch": "openEuler/aarch64",
+                            "size": "3.7 GB",
+                            "update_time": "2024/08/22"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-mindspore2.3.0rc1-openmind0.7.1",
+                    "hardware" : "NPU"
+                },
+                {
+                    "version": "openeuler-python3.8-pytorch2.1.0-mindspore2.3.0rc1-openmind0.7.1",
+                    "update_time": "2024/08/22",
+                    "size": "3.7 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.8-pytorch2.1.0-mindspore2.3.0rc1-openmind0.7.1",
+                    "manifest": [
+                        {
+                            "hash": "sha256:f860fc05feaea2eec1ddd64b9101a057be3ea12bfd80f98951cf8ae64d30567c",
+                            "os_arch": "openEuler/aarch64",
+                            "size": "3.7 GB",
+                            "update_time": "2024/08/22"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.8-pytorch2.1.0-mindspore2.3.0rc1-openmind0.7.1",
+                    "hardware" : "CPU"
+                },
+                {
+                    "version": "openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1-openmind0.7.1",
+                    "update_time": "2024/08/22",
+                    "size": "3.7 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1-openmind0.7.1",
+                    "manifest": [
+                        {
+                            "hash": "sha256:f860fc05feaea2eec1ddd64b9101a057be3ea12bfd80f98951cf8ae64d30567c",
+                            "os_arch": "openEuler/aarch64",
+                            "size": "3.7 GB",
+                            "update_time": "2024/08/22"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1-openmind0.7.1",
+                    "hardware" : "NPU"
+                },
+                {
+                    "version": "openeuler-python3.8-mindspore2.3.0rc1-openmind0.7.1",
+                    "update_time": "2024/08/22",
+                    "size": "1.2 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.8-mindspore2.3.0rc1-openmind0.7.1",
+                    "manifest": [
+                        {
+                            "hash": "sha256:e2cd365220a054523e90417e7186bbc12a2710b6fd89443af1f6a21bad0d7361",
+                            "os_arch": "openEuler/amd64",
+                            "size": "1.2 GB",
+                            "update_time": "2024/08/22"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.8-mindspore2.3.0rc1-openmind0.7.1",
+                    "hardware" : "CPU"
+                },
+                {
+                    "version": "openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-openmind0.7.1",
+                    "update_time": "2024/08/22",
+                    "size": "3.8 GB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-openmind0.7.1",
+                    "manifest": [
+                        {
+                            "hash": "sha256:874dbc100c7f4f8ac6181ebd84dd7c3ccab63d0819869f88e236c844458addbd",
+                            "os_arch": "openEuler/aarch64",
+                            "size": "3.8 GB",
+                            "update_time": "2024/08/22"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-openmind0.7.1",
+                    "hardware" : "NPU"
+                },
+                {
+                    "version": "openeuler-python3.8-pytorch2.1.0-openmind0.7.1",
+                    "update_time": "2024/08/22",
+                    "size": "810.3 MB",
+                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.8-pytorch2.1.0-openmind0.7.1",
+                    "manifest": [
+                        {
+                            "hash": "sha256:8ff008a5d43a16b89460dada5ea50a16ee864492260277b62c3c80623275769d",
+                            "os_arch": "openEuler/amd64",
+                            "size": "810.3 MB",
+                            "update_time": "2024/08/22"
+                        }
+                    ],
+                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.8-pytorch2.1.0-openmind0.7.1",
+                    "hardware" : "CPU"
+                }
+            ]
+        }
     ]
 }
