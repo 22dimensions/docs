@@ -232,3 +232,4 @@ if __name__ == "__main__":
     }
 ]
 
+[{"tag":"swr.cn-southwest-2.myhuaweicloud.com/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-openmind0.7.1","updated":"2024-08-22T09:18:33.415304Z"}]
