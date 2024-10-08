@@ -1,0 +1,6 @@
+registry = {
+    "crs.bj": "huawei0809-registry-huabei2.crs.ctyun.cn",
+    "crs.huadong": "openmind-docker-registry-registry-huadong1.crs.ctyun.cn",
+    "crs.hz": "huawei-registry-hangzhou7.crs.ctyun.cn",
+    "swr": "swr.cn-southwest-2.myhuaweicloud.com"
+}
