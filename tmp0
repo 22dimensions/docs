@@ -1,6 +1,234 @@
-registry = {
-    "crs.bj": "huawei0809-registry-huabei2.crs.ctyun.cn",
-    "crs.huadong": "openmind-docker-registry-registry-huadong1.crs.ctyun.cn",
-    "crs.hz": "huawei-registry-hangzhou7.crs.ctyun.cn",
-    "swr": "swr.cn-southwest-2.myhuaweicloud.com"
+# the input is image name such as: "swr.cn-southwest-2.myhuaweicloud.com/base_image/pytorch:openeuler-python3.8-pytorch2.1.0"
+
+import subprocess
+import os
+# convert result to json
+import json
+
+registry_prefix = "registry.modelers.cn/base_image/"
+
+def get_manifest(item):
+    manifest = {}
+    manifest["hash"] = item["Descriptor"]["digest"]
+    manifest["os_arch"] = item["Descriptor"]["platform"]["os"] + "/" + item["Descriptor"]["platform"]["architecture"]
+    layers = item["SchemaV2Manifest"]["layers"]
+    size = 0
+    for layer in layers:
+        size += layer["size"]
+    # 转换为 GB
+    size_in_gb = size / (1024 ** 3)
+    formatted_size_in_gb = "{:.1f} GB".format(size_in_gb)
+
+    # 转换为 MB
+    size_in_mb = size / (1024 ** 2)
+    formatted_size_in_mb = "{:.1f} MB".format(size_in_mb)
+    if size_in_gb < 1:
+        manifest["size"] = formatted_size_in_mb
+    else:
+        manifest["size"] = formatted_size_in_gb
+    return manifest
+
+def get_meta_data():
+    metadata = {}
+    return 
+
+
+def get_image_info(tag_dict):
+    image_name = tag_dict["tag"]
+    tag = image_name.rsplit(":", 1)[1]
+    repo = image_name.rsplit("/", 1)[1]
+    # 执行 shell 命令并获取输出
+    result = subprocess.run(["docker" ,"manifest", "inspect", "-v" , image_name], stdout=subprocess.PIPE, text=True)
+    manifest_inspect_out = json.loads(result.stdout)
+    image_info = {}
+    image_info["version"] = tag
+    update_time = tag_dict["updated"].rsplit("T", 1)[0].replace("-", "/")
+    image_info["update_time"] = update_time
+    image_info["name"] = registry_prefix + repo
+    image_info["docker_pull_command"] = "docker pull " + image_info["name"]
+    metadata = {}
+    
+    # get manifest
+
+    manifest_list = []
+
+    manifest = {}
+    if type(manifest_inspect_out) == list:
+        for item in manifest_inspect_out:
+            manifest = get_manifest(item)
+            manifest["update_time"] = update_time
+            manifest_list.append(manifest)
+    else:
+        manifest = get_manifest(manifest_inspect_out)
+        manifest["update_time"] = update_time
+        manifest_list.append(manifest)
+
+    image_info["manifest"] = manifest_list
+
+    print(image_info)
+
+if __name__ == "__main__":
+
+    with open("/home/qz/repo/image_center_pipeline/tagList.json", "r") as f:
+        data = json.load(f)
+        for tag_dict in data:
+            get_image_info(tag_dict)
+
+{
+    "version": "openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0",
+    "update_time": "2024/09/25",
+    "size": "3.6 GB",
+    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0",
+    "manifest": [
+        {
+            "hash": "sha256:e3a1677044bb1397cd87be4f3fa73aeaef3909797e3572d3344dfff560da899e",
+            "os_arch": "openEuler/aarch64",
+            "size": "3.6 GB",
+            "update_time": "2024/08/22"
+        }
+    ],
+    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0",
+    "metadata" : {
+        "model_ci" : "false",
+        "space": "true",
+        "hardware_version" : "NPU",
+        "python_version": "3.9",
+        "openmind_version": "0.8.0",
+        "framework" : "pytorch",
+        "framework_version" : "2.1.0",
+        "cann_version" : "8.0.rc2.beta1"
+    }
 }
+
+
+[
+    {
+            "Ref": "swr.cn-southwest-2.myhuaweicloud.com/base_image/cann:ubuntu-python3.9-cann8.0.rc3.alpha002@sha256:7e0a08eea457270122eac13b2adcbf9c0032b0c9302462dea764154d7fc5b83c",
+            "Descriptor": {
+                    "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+                    "digest": "sha256:7e0a08eea457270122eac13b2adcbf9c0032b0c9302462dea764154d7fc5b83c",
+                    "size": 2066,
+                    "platform": {
+                            "architecture": "amd64",
+                            "os": "linux"
+                    }
+            },
+            "Raw": "ewogICJzY2hlbWFWZXJzaW9uIjogMiwKICAibWVkaWFUeXBlIjogImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuZGlzdHJpYnV0aW9uLm1hbmlmZXN0LnYyK2pzb24iLAogICJjb25maWciOiB7CiAgICAibWVkaWFUeXBlIjogImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLAogICAgImRpZ2VzdCI6ICJzaGEyNTY6MmYzODM1MWM1YWQ3OGYwYjI3NDAwNTljZTJlNmQ1YmJkYmM0NTk4NDc4ZWU0OGU5NjRkMzE0ZTY1OTlhOTZkOCIsCiAgICAic2l6ZSI6IDUwNDAKICB9LAogICJsYXllcnMiOiBbCiAgICB7CiAgICAgICJtZWRpYVR5cGUiOiAiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsCiAgICAgICJkaWdlc3QiOiAic2hhMjU2OjY0MTQzNzhiNjQ3NzgwZmVlOGZkOTAzZGRiOTU0MWQxMzRhMTk0N2NlMDkyZDA4YmRlYjIzYTU0Y2IzNjg0YWMiLAogICAgICAic2l6ZSI6IDI5NTM1Njg4CiAgICB9LAogICAgewogICAgICAibWVkaWFUeXBlIjogImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLAogICAgICAiZGlnZXN0IjogInNoYTI1NjozZjdmYzBjMGUxY2E2N2EyZDFkMTA1NGI0OThmYjk4NTgzMDc2OTEyM2EzM2QyMjk3YmNhNmI2NzVkODhjMDdlIiwKICAgICAgInNpemUiOiA4MjExOTUyCiAgICB9LAogICAgewogICAgICAibWVkaWFUeXBlIjogImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLAogICAgICAiZGlnZXN0IjogInNoYTI1NjpjYmU2MDMwZjJkY2FhMTVkZDA5ZGNkOTk4MjU5YjBkNDc2M2IzMDkxOTdkZDBhNTJmMzAwZGM1MThkOTM2MWUzIiwKICAgICAgInNpemUiOiAxNDI5MzgwNzYKICAgIH0sCiAgICB7CiAgICAgICJtZWRpYVR5cGUiOiAiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsCiAgICAgICJkaWdlc3QiOiAic2hhMjU2OmY0NTUzM2UxN2U3YjgwYzkyNTQ0MWYzZDE0ZjhiMDJmMWQ0OGFkZTY5ZjEwNGE1YWI5ZTZkODJiYjI2ZTc5YzgiLAogICAgICAic2l6ZSI6IDM3MjAzMDkzMDYKICAgIH0sCiAgICB7CiAgICAgICJtZWRpYVR5cGUiOiAiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsCiAgICAgICJkaWdlc3QiOiAic2hhMjU2OjkyMDBkMTdhODRlMjQ3MDU5MDAzZjY1YzM1YjMyMjU3NGJlMjlmYzEwM2YzMWE5NWZjNGQ3OGQxZjUwYzk3N2EiLAogICAgICAic2l6ZSI6IDIxNQogICAgfSwKICAgIHsKICAgICAgIm1lZGlhVHlwZSI6ICJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwKICAgICAgImRpZ2VzdCI6ICJzaGEyNTY6ZWY1ZDJhYjdiMTBlMDI1ZTAwMzVmNDcwMTY4YWRiZGQ3ZmI4NDI5ODNjMWRlYWNmMTNjM2Y0N2M3YjZkMDcwMCIsCiAgICAgICJzaXplIjogMTkyOAogICAgfQogIF0sCiAgImFubm90YXRpb25zIjogewogICAgIm9yZy5vcGVuY29udGFpbmVycy5pbWFnZS5jcmVhdGVkIjogIjIwMjQtMDktMjZUMTI6MDI6MTguMDUyWiIsCiAgICAib3JnLm9wZW5jb250YWluZXJzLmltYWdlLmRlc2NyaXB0aW9uIjogIkFzY2VuZCBiYXNlIGltYWdlIGRvY2tlcmZpbGUiLAogICAgIm9yZy5vcGVuY29udGFpbmVycy5pbWFnZS5saWNlbnNlcyI6ICJBcGFjaGUtMi4wIiwKICAgICJvcmcub3BlbmNvbnRhaW5lcnMuaW1hZ2UucmV2aXNpb24iOiAiNGI4YjQ2M2EzY2NmMWEwNjg0YjhjZGE0ZTMwOWRhN2UxYTYzMDJlOCIsCiAgICAib3JnLm9wZW5jb250YWluZXJzLmltYWdlLnNvdXJjZSI6ICJodHRwczovL2dpdGh1Yi5jb20vb3Blbm1lcmxpbi9kb2NrZXJmaWxlIiwKICAgICJvcmcub3BlbmNvbnRhaW5lcnMuaW1hZ2UudGl0bGUiOiAiZG9ja2VyZmlsZSIsCiAgICAib3JnLm9wZW5jb250YWluZXJzLmltYWdlLnVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vb3Blbm1lcmxpbi9kb2NrZXJmaWxlIiwKICAgICJvcmcub3BlbmNvbnRhaW5lcnMuaW1hZ2UudmVyc2lvbiI6ICJ2MC4yLnJjMiIKICB9Cn0=",
+            "SchemaV2Manifest": {
+                    "schemaVersion": 2,
+                    "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+                    "config": {
+                            "mediaType": "application/vnd.docker.container.image.v1+json",
+                            "digest": "sha256:2f38351c5ad78f0b2740059ce2e6d5bbdbc4598478ee48e964d314e6599a96d8",
+                            "size": 5040
+                    },
+                    "layers": [
+                            {
+                                    "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                                    "digest": "sha256:6414378b647780fee8fd903ddb9541d134a1947ce092d08bdeb23a54cb3684ac",
+                                    "size": 29535688
+                            },
+                            {
+                                    "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                                    "digest": "sha256:3f7fc0c0e1ca67a2d1d1054b498fb985830769123a33d2297bca6b675d88c07e",
+                                    "size": 8211952
+                            },
+                            {
+                                    "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                                    "digest": "sha256:cbe6030f2dcaa15dd09dcd998259b0d4763b309197dd0a52f300dc518d9361e3",
+                                    "size": 142938076
+                            },
+                            {
+                                    "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                                    "digest": "sha256:f45533e17e7b80c925441f3d14f8b02f1d48ade69f104a5ab9e6d82bb26e79c8",
+                                    "size": 3720309306
+                            },
+                            {
+                                    "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                                    "digest": "sha256:9200d17a84e247059003f65c35b322574be29fc103f31a95fc4d78d1f50c977a",
+                                    "size": 215
+                            },
+                            {
+                                    "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                                    "digest": "sha256:ef5d2ab7b10e025e0035f470168adbdd7fb842983c1deacf13c3f47c7b6d0700",
+                                    "size": 1928
+                            }
+                    ],
+                    "annotations": {
+                            "org.opencontainers.image.created": "2024-09-26T12:02:18.052Z",
+                            "org.opencontainers.image.description": "Ascend base image dockerfile",
+                            "org.opencontainers.image.licenses": "Apache-2.0",
+                            "org.opencontainers.image.revision": "4b8b463a3ccf1a0684b8cda4e309da7e1a6302e8",
+                            "org.opencontainers.image.source": "https://github.com/openmerlin/dockerfile",
+                            "org.opencontainers.image.title": "dockerfile",
+                            "org.opencontainers.image.url": "https://github.com/openmerlin/dockerfile",
+                            "org.opencontainers.image.version": "v0.2.rc2"
+                    }
+            }
+    },
+    {
+            "Ref": "swr.cn-southwest-2.myhuaweicloud.com/base_image/cann:ubuntu-python3.9-cann8.0.rc3.alpha002@sha256:705a86ac3b8a8668c7e45660dd552c94398af07d5ab14fd2e1a6cb5e5aab049d",
+            "Descriptor": {
+                    "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+                    "digest": "sha256:705a86ac3b8a8668c7e45660dd552c94398af07d5ab14fd2e1a6cb5e5aab049d",
+                    "size": 2066,
+                    "platform": {
+                            "architecture": "arm64",
+                            "os": "linux"
+                    }
+            },
+            "Raw": "ewogICJzY2hlbWFWZXJzaW9uIjogMiwKICAibWVkaWFUeXBlIjogImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuZGlzdHJpYnV0aW9uLm1hbmlmZXN0LnYyK2pzb24iLAogICJjb25maWciOiB7CiAgICAibWVkaWFUeXBlIjogImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLAogICAgImRpZ2VzdCI6ICJzaGEyNTY6MmNmNDU5YTk0N2I2OTVmYzVlYjU2MmI0ZDE3ZmYxM2FkYTQ4OTIzNTkwNjJjNTI3MzZhNDViYmIwZjgzMjY4MiIsCiAgICAic2l6ZSI6IDUwNDEKICB9LAogICJsYXllcnMiOiBbCiAgICB7CiAgICAgICJtZWRpYVR5cGUiOiAiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsCiAgICAgICJkaWdlc3QiOiAic2hhMjU2OmExODY5MDA2NzFhYjYyZTFkZWEzNjQ3ODhmNGU4NGMxNTZlMTgyNTkzOTkxNGNmYjVhNjc3MGJlMmI1OGI0ZGEiLAogICAgICAic2l6ZSI6IDI3MzU4MzI5CiAgICB9LAogICAgewogICAgICAibWVkaWFUeXBlIjogImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLAogICAgICAiZGlnZXN0IjogInNoYTI1Njo4MTM0NTEwM2EwYjY5ZDY5YTk4MjhmODVkYjZkMDk5NWQ0ZDQ2NTg0MzhjMDliOWFlNjBhZWY0ZGU4M2E2Y2M3IiwKICAgICAgInNpemUiOiA3MDYyOTE0CiAgICB9LAogICAgewogICAgICAibWVkaWFUeXBlIjogImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuaW1hZ2Uucm9vdGZzLmRpZmYudGFyLmd6aXAiLAogICAgICAiZGlnZXN0IjogInNoYTI1NjozOGJiMjIxNzg0YzI1YTdmOTEwNGZiZTBjZWQyODlkNGQ2ODkyNzZlZWZlMmVjZWUwMjRiMzFjYzE0NDkyNWRkIiwKICAgICAgInNpemUiOiAxMzI4OTM1ODkKICAgIH0sCiAgICB7CiAgICAgICJtZWRpYVR5cGUiOiAiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsCiAgICAgICJkaWdlc3QiOiAic2hhMjU2OjQ4ZDM2ODkzNDYwOTZmMWVjMTE5MDUwOTJhYTc5ZTRkNWMyMzczOTIxYzU1YzU1OGRkZjAzMjQxYmRlZmY4YTgiLAogICAgICAic2l6ZSI6IDM3MTU2Nzg4ODgKICAgIH0sCiAgICB7CiAgICAgICJtZWRpYVR5cGUiOiAiYXBwbGljYXRpb24vdm5kLmRvY2tlci5pbWFnZS5yb290ZnMuZGlmZi50YXIuZ3ppcCIsCiAgICAgICJkaWdlc3QiOiAic2hhMjU2OjI4ZDMxOGY5OTNjYzczYjc3ODg3NDdlMDI1MGQ0MzY1N2IyOWUzMmVkYjQ5MjZjM2YwZWI4YzNhYzUwN2YzYjMiLAogICAgICAic2l6ZSI6IDIxNQogICAgfSwKICAgIHsKICAgICAgIm1lZGlhVHlwZSI6ICJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmltYWdlLnJvb3Rmcy5kaWZmLnRhci5nemlwIiwKICAgICAgImRpZ2VzdCI6ICJzaGEyNTY6ZTc5MWI4OGY1ODQ2YjcyNjA4N2E0MDFmYjZiNDE1ZWIwYTI0MWUyOWFlMGI3MzliMjI2OWM3YjgxYWY1MzBhZSIsCiAgICAgICJzaXplIjogMTkyNwogICAgfQogIF0sCiAgImFubm90YXRpb25zIjogewogICAgIm9yZy5vcGVuY29udGFpbmVycy5pbWFnZS5jcmVhdGVkIjogIjIwMjQtMDktMjZUMTI6MDI6MTguMDUyWiIsCiAgICAib3JnLm9wZW5jb250YWluZXJzLmltYWdlLmRlc2NyaXB0aW9uIjogIkFzY2VuZCBiYXNlIGltYWdlIGRvY2tlcmZpbGUiLAogICAgIm9yZy5vcGVuY29udGFpbmVycy5pbWFnZS5saWNlbnNlcyI6ICJBcGFjaGUtMi4wIiwKICAgICJvcmcub3BlbmNvbnRhaW5lcnMuaW1hZ2UucmV2aXNpb24iOiAiNGI4YjQ2M2EzY2NmMWEwNjg0YjhjZGE0ZTMwOWRhN2UxYTYzMDJlOCIsCiAgICAib3JnLm9wZW5jb250YWluZXJzLmltYWdlLnNvdXJjZSI6ICJodHRwczovL2dpdGh1Yi5jb20vb3Blbm1lcmxpbi9kb2NrZXJmaWxlIiwKICAgICJvcmcub3BlbmNvbnRhaW5lcnMuaW1hZ2UudGl0bGUiOiAiZG9ja2VyZmlsZSIsCiAgICAib3JnLm9wZW5jb250YWluZXJzLmltYWdlLnVybCI6ICJodHRwczovL2dpdGh1Yi5jb20vb3Blbm1lcmxpbi9kb2NrZXJmaWxlIiwKICAgICJvcmcub3BlbmNvbnRhaW5lcnMuaW1hZ2UudmVyc2lvbiI6ICJ2MC4yLnJjMiIKICB9Cn0=",
+            "SchemaV2Manifest": {
+                    "schemaVersion": 2,
+                    "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+                    "config": {
+                            "mediaType": "application/vnd.docker.container.image.v1+json",
+                            "digest": "sha256:2cf459a947b695fc5eb562b4d17ff13ada4892359062c52736a45bbb0f832682",
+                            "size": 5041
+                    },
+                    "layers": [
+                            {
+                                    "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                                    "digest": "sha256:a186900671ab62e1dea364788f4e84c156e1825939914cfb5a6770be2b58b4da",
+                                    "size": 27358329
+                            },
+                            {
+                                    "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                                    "digest": "sha256:81345103a0b69d69a9828f85db6d0995d4d4658438c09b9ae60aef4de83a6cc7",
+                                    "size": 7062914
+                            },
+                            {
+                                    "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                                    "digest": "sha256:38bb221784c25a7f9104fbe0ced289d4d689276eefe2ecee024b31cc144925dd",
+                                    "size": 132893589
+                            },
+                            {
+                                    "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                                    "digest": "sha256:48d3689346096f1ec11905092aa79e4d5c2373921c55c558ddf03241bdeff8a8",
+                                    "size": 3715678888
+                            },
+                            {
+                                    "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                                    "digest": "sha256:28d318f993cc73b7788747e0250d43657b29e32edb4926c3f0eb8c3ac507f3b3",
+                                    "size": 215
+                            },
+                            {
+                                    "mediaType": "application/vnd.docker.image.rootfs.diff.tar.gzip",
+                                    "digest": "sha256:e791b88f5846b726087a401fb6b415eb0a241e29ae0b739b2269c7b81af530ae",
+                                    "size": 1927
+                            }
+                    ],
+                    "annotations": {
+                            "org.opencontainers.image.created": "2024-09-26T12:02:18.052Z",
+                            "org.opencontainers.image.description": "Ascend base image dockerfile",
+                            "org.opencontainers.image.licenses": "Apache-2.0",
+                            "org.opencontainers.image.revision": "4b8b463a3ccf1a0684b8cda4e309da7e1a6302e8",
+                            "org.opencontainers.image.source": "https://github.com/openmerlin/dockerfile",
+                            "org.opencontainers.image.title": "dockerfile",
+                            "org.opencontainers.image.url": "https://github.com/openmerlin/dockerfile",
+                            "org.opencontainers.image.version": "v0.2.rc2"
+                    }
+            }
+    }
+]
+
