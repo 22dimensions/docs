@@ -1,349 +1,646 @@
-{
-    "base_image": [
-        {
-            "name": "CANN",
-            "label": ["CANN"],
-            "description": "CANN（Compute Architecture for Neural Networks）是华为针对AI场景推出的异构计算架构，对上支持多种AI框架，对下服务AI处理器与编程，发挥承上启下的关键作用，是提升昇腾AI处理器计算效率的关键平台。同时针对多样化应用场景，提供高效易用的编程接口，支持用户快速构建基于昇腾平台的AI应用和业务",
-            "update_time": "2024/08/22",
-            "base_info": {
-                "os": ["openEuler"],
-                "arch": ["aarch64"],
-                "type": "基础镜像"
-            },
-            "quick_start": "/docs/cann_quick_start.md",
-            "how_to_use": "/docs/cann_how_to_use.md",
-            "docker_pull_command": "docker pull registry.modelers.cn/base_image/cann",
-            "tags": [
-                {
-                    "version": "latest",
-                    "update_time": "2024/09/26",
-                    "size": "3.2 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/cann",
-                    "manifest": [
-                        {
-                            "hash": "sha256:d15f60358046fe998987a65b2fc848ef69d6f1a65392ed825a250ef602ccccfb",
-                            "os_arch": "Ubuntu/aarch64",
-                            "size": "3.2 GB",
-                            "update_time": "2024/09/26"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/cann",
-                    "hardware" : "NPU"
-                },
-                {
-                    "version": "ubuntu-python3.9-cann8.0.rc3.alpha002",
-                    "update_time": "2024/09/26",
-                    "size": "3.1 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/cann:ubuntu-python3.9-cann8.0.rc3.alpha002",
-                    "manifest": [
-                        {
-                            "hash": "sha256:d15f60358046fe998987a65b2fc848ef69d6f1a65392ed825a250ef602ccccfb",
-                            "os_arch": "Ubuntu/aarch64",
-                            "size": "3.1 GB",
-                            "update_time": "2024/09/26"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/cann:ubuntu-python3.9-cann8.0.rc3.alpha002",
-                    "hardware" : "NPU"
-                },
-                {
-                    "version": "openeuler-python3.8-cann8.0.rc1.beta1",
-                    "update_time": "2024/08/22",
-                    "size": "3.2 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/cann:openeuler-python3.8-cann8.0.rc1.beta1",
-                    "manifest": [
-                        {
-                            "hash": "sha256:d15f60358046fe998987a65b2fc848ef69d6f1a65392ed825a250ef602ccccfb",
-                            "os_arch": "openEuler/aarch64",
-                            "size": "3.2GB",
-                            "update_time": "2024/08/22"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/cann:openeuler-python3.8-cann8.0.rc1.beta1",
-                    "hardware" : "NPU"
-                }
-            ]
-        },
-        {
-            "name": "PyTorch",
-            "label": ["PyTorch"],
-            "description": "PyTorch是一个开源的Python机器学习库，基于Torch库，底层由C++实现，应用于人工智能领域，如计算机视觉和自然语言处理。它最初由Meta Platforms的人工智能研究团队开发，现在属于Linux基金会的一部分。它是在修改后的BSD许可证下发布的自由及开放源代码软件。",
-            "update_time": "2024/08/22",
-            "base_info": {
-                "os": ["openEuler"],
-                "arch": ["aarch64", "amd64"],
-                "type": "基础镜像"
-            },
-            "quick_start": "/docs/torch_quick_start.md",
-            "how_to_use": "/docs/torch_how_to_use.md",
-            "docker_pull_command": "docker pull registry.modelers.cn/base_image/pytorch",
-            "tags": [
-                {
-                    "version": "ubuntu-python3.8-cann8.0.rc1.beta1-pytorch2.2.0",
-                    "update_time": "2024/08/22",
-                    "size": "3.3 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/pytorch:ubuntu-python3.8-cann8.0.rc1.beta1-pytorch2.2.0",
-                    "manifest": [
-                        {
-                            "hash": "sha256:0d04d69e0178a2d788d4c2e1282576b01170616a584466862fffa98431c7eb93",
-                            "os_arch": "Ubuntu/aarch64",
-                            "size": "3.3GB",
-                            "update_time": "2024/09/26"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/pytorch:ubuntu-python3.8-cann8.0.rc1.beta1-pytorch2.2.0",
-                    "hardware" : "NPU"
-                },
-                {
-                    "version": "openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0",
-                    "update_time": "2024/08/22",
-                    "size": "3.3 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/pytorch:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0",
-                    "manifest": [
-                        {
-                            "hash": "sha256:ebdfeed17fb39479859ed8debdd11093ec1d3915a80ccdcfb65ef2481b6fc69c",
-                            "os_arch": "openEuler/aarch64",
-                            "size": "3.3GB",
-                            "update_time": "2024/08/22"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/pytorch:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0",
-                    "hardware" : "NPU"
-                }
-            ]
-        },
-        {
-            "name": "MindSpore",
-            "label": ["MindSpore"],
-            "description": "昇思MindSpore是一个全场景深度学习框架，旨在实现易开发、高效执行、全场景统一部署三大目标。其中易开发表现为API友好，调试难度低；高效执行包括计算效率、数据预处理效率和分布式训练效率；全场景则指框架同时支持云、边缘以及端侧场景。",
-            "update_time": "2024/08/22",
-            "base_info": {
-                "os": ["openEuler"],
-                "arch": ["aarch64", "amd64"],
-                "type": "基础镜像"
-            },
-            "quick_start": "/docs/mindspore_quick_start.md",
-            "how_to_use": "/docs/mindspore_how_to_use.md",
-            "docker_pull_command": "docker pull registry.modelers.cn/base_image/mindspore",
-            "tags": [
-                {
-                    "version": "openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1",
-                    "update_time": "2024/08/22",
-                    "size": "3.4 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/mindspore:openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1",
-                    "manifest": [
-                        {
-                            "hash": "sha256:625f1c94dc349f27e3ed25e6bf49d159c2bf581fab0e160d21cb7e8e3aeaf2c6",
-                            "os_arch": "openEuler/aarch64",
-                            "size": "3.4GB",
-                            "update_time": "2024/08/22"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/mindspore:openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1",
-                    "hardware" : "NPU"
-                }
-            ]
-        },
-        {
-            "name": "openMind",
-            "label": ["PyTorch", "MindSpore"],
-            "description": "openMind Library是一个开源的深度学习开发套件，支持从模型训练到部署的全流程，原生兼容PyTorch和MindSpore等主流框架",
-            "update_time": "2024/08/22",
-            "base_info": {
-                "os": ["openEuler"],
-                "arch": ["aarch64", "amd64"],
-                "type": "基础镜像"
-            },
-            "quick_start": "/docs/openmind_quick_start.md",
-            "how_to_use": "/docs/openmind_how_to_use.md",
-            "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind",
-            "tags": [
-                {
-                    "version": "latest",
-                    "update_time": "2024/09/25",
-                    "size": "4.0 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind",
-                    "manifest": [
-                        {
-                            "hash": "sha256:c3b51057d5c1962e1c3fc13a10d7c082b08102137e9d3f77f6621a1ad7c4ad20",
-                            "os_arch": "openEuler/aarch64",
-                            "size": "4.0 GB",
-                            "update_time": "2024/09/25"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/openmind",
-                    "hardware" : "NPU"
-                },
-                {
-                    "version": "openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-mindspore2.3.1-openmind0.8.0",
-                    "update_time": "2024/09/26",
-                    "size": "4.0 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-mindspore2.3.1-openmind0.8.0",
-                    "manifest": [
-                        {
-                            "hash": "sha256:c3b51057d5c1962e1c3fc13a10d7c082b08102137e9d3f77f6621a1ad7c4ad20",
-                            "os_arch": "openEuler/aarch64",
-                            "size": "4.0 GB",
-                            "update_time": "2024/09/26"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-mindspore2.3.1-openmind0.8.0",
-                    "hardware" : "NPU"
-                },
-                {
-                    "version": "openeuler-python3.9-mindspore2.3.1-openmind0.8.0",
-                    "update_time": "2024/09/25",
-                    "size": "1.4 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.9-mindspore2.3.1-openmind0.8.0",
-                    "manifest": [
-                        {
-                            "hash": "sha256:829928e49091590ad090644822297ce11c4f8663130c4c24a0763a6ca59fc5d5",
-                            "os_arch": "openEuler/amd64",
-                            "size": "1.4 GB",
-                            "update_time": "2024/08/22"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.9-mindspore2.3.1-openmind0.8.0",
-                    "hardware" : "CPU"
-                },
-                {
-                    "version": "openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0",
-                    "update_time": "2024/09/25",
-                    "size": "3.6 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0",
-                    "manifest": [
-                        {
-                            "hash": "sha256:e3a1677044bb1397cd87be4f3fa73aeaef3909797e3572d3344dfff560da899e",
-                            "os_arch": "openEuler/aarch64",
-                            "size": "3.6 GB",
-                            "update_time": "2024/08/22"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.9-cann8.0.rc2.beta1-pytorch2.1.0-openmind0.8.0",
-                    "metadata" : {
-                        "model_ci" : "false",
-                        "space": "true",
-                        "hardware_version" : "NPU",
-                        "python_version": "3.9",
-                        "openmind_version": "0.8.0",
-                        "framework" : "pytorch",
-                        "framework_version" : "2.1.0",
-                        "cann_version" : "8.0.rc2.beta1"
-                    }
-                },
-                {
-                    "version": "openeuler-python3.9-pytorch2.1.0-openmind0.8.0",
-                    "update_time": "2024/09/25",
-                    "size": "732.0 MB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.9-pytorch2.1.0-openmind0.8.0",
-                    "manifest": [
-                        {
-                            "hash": "sha256:4b3c1cbedec9ccff10b5858a754ed1ebcf58eb646931573c3bdfa696519b222b",
-                            "os_arch": "openEuler/amd64",
-                            "size": "732.0 MB",
-                            "update_time": "2024/08/22"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.9-pytorch2.1.0-openmind0.8.0",
-                    "hardware" : "CPU"
-                },
-                {
-                    "version": "openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-mindspore2.3.0rc1-openmind0.7.1",
-                    "update_time": "2024/08/22",
-                    "size": "3.7 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-mindspore2.3.0rc1-openmind0.7.1",
-                    "manifest": [
-                        {
-                            "hash": "sha256:f860fc05feaea2eec1ddd64b9101a057be3ea12bfd80f98951cf8ae64d30567c",
-                            "os_arch": "openEuler/aarch64",
-                            "size": "3.7 GB",
-                            "update_time": "2024/08/22"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-mindspore2.3.0rc1-openmind0.7.1",
-                    "hardware" : "NPU"
-                },
-                {
-                    "version": "openeuler-python3.8-pytorch2.1.0-mindspore2.3.0rc1-openmind0.7.1",
-                    "update_time": "2024/08/22",
-                    "size": "3.7 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.8-pytorch2.1.0-mindspore2.3.0rc1-openmind0.7.1",
-                    "manifest": [
-                        {
-                            "hash": "sha256:f860fc05feaea2eec1ddd64b9101a057be3ea12bfd80f98951cf8ae64d30567c",
-                            "os_arch": "openEuler/aarch64",
-                            "size": "3.7 GB",
-                            "update_time": "2024/08/22"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.8-pytorch2.1.0-mindspore2.3.0rc1-openmind0.7.1",
-                    "hardware" : "CPU"
-                },
-                {
-                    "version": "openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1-openmind0.7.1",
-                    "update_time": "2024/08/22",
-                    "size": "3.7 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1-openmind0.7.1",
-                    "manifest": [
-                        {
-                            "hash": "sha256:f860fc05feaea2eec1ddd64b9101a057be3ea12bfd80f98951cf8ae64d30567c",
-                            "os_arch": "openEuler/aarch64",
-                            "size": "3.7 GB",
-                            "update_time": "2024/08/22"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-mindspore2.3.0rc1-openmind0.7.1",
-                    "hardware" : "NPU"
-                },
-                {
-                    "version": "openeuler-python3.8-mindspore2.3.0rc1-openmind0.7.1",
-                    "update_time": "2024/08/22",
-                    "size": "1.2 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.8-mindspore2.3.0rc1-openmind0.7.1",
-                    "manifest": [
-                        {
-                            "hash": "sha256:e2cd365220a054523e90417e7186bbc12a2710b6fd89443af1f6a21bad0d7361",
-                            "os_arch": "openEuler/amd64",
-                            "size": "1.2 GB",
-                            "update_time": "2024/08/22"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.8-mindspore2.3.0rc1-openmind0.7.1",
-                    "hardware" : "CPU"
-                },
-                {
-                    "version": "openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-openmind0.7.1",
-                    "update_time": "2024/08/22",
-                    "size": "3.8 GB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-openmind0.7.1",
-                    "manifest": [
-                        {
-                            "hash": "sha256:874dbc100c7f4f8ac6181ebd84dd7c3ccab63d0819869f88e236c844458addbd",
-                            "os_arch": "openEuler/aarch64",
-                            "size": "3.8 GB",
-                            "update_time": "2024/08/22"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.8-cann8.0.rc1.beta1-pytorch2.1.0-openmind0.7.1",
-                    "hardware" : "NPU"
-                },
-                {
-                    "version": "openeuler-python3.8-pytorch2.1.0-openmind0.7.1",
-                    "update_time": "2024/08/22",
-                    "size": "810.3 MB",
-                    "docker_pull_command": "docker pull registry.modelers.cn/base_image/openmind:openeuler-python3.8-pytorch2.1.0-openmind0.7.1",
-                    "manifest": [
-                        {
-                            "hash": "sha256:8ff008a5d43a16b89460dada5ea50a16ee864492260277b62c3c80623275769d",
-                            "os_arch": "openEuler/amd64",
-                            "size": "810.3 MB",
-                            "update_time": "2024/08/22"
-                        }
-                    ],
-                    "name" : "registry.modelers.cn/base_image/openmind:openeuler-python3.8-pytorch2.1.0-openmind0.7.1",
-                    "hardware" : "CPU"
-                }
-            ]
-        }
-    ]
-}
+[INFO] ATRACE(8,python):2024-10-11-09:11:26.210.785 [trace_attr.c:187](tid:8) attr init success, timeout=0.
+[INFO] ATRACE(8,python):2024-10-11-09:11:26.210.828 [trace_recorder.c:121](tid:8) use root path: /home/openmind/ascend
+[INFO] HCCL(8,python):2024-10-11-09:11:26.212.876 [adapter_rts.cc:2389][8][adapter_rts.cc][CallBackInitRts] g_deviceType [6] g_deviceLogicId [-1] g_devicePhyId [-1]
+[INFO] RUNTIME(8,python):2024-10-11-09:11:26.329.425 [runtime.cc:5210] 8 GetVisibleDevices: ASCEND_RT_VISIBLE_DEVICES param was not set
+[INFO] RUNTIME(8,python):2024-10-11-09:11:26.330.452 [elf.cc:451] 8 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:11:26.330.485 [elf.cc:451] 8 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[EVENT] PROFILING(8,python):2024-10-11-09:11:26.345.386 [msprof_callback_impl.cpp:336] >>> (tid:8) Started to register profiling ctrl callback.
+[EVENT] PROFILING(8,python):2024-10-11-09:11:26.345.571 [msprof_callback_impl.cpp:343] >>> (tid:8) Started to register profiling hash id callback.
+[INFO] PROFILING(8,python):2024-10-11-09:11:26.345.581 [prof_atls_plugin.cpp:83] >>> (tid:8) RegisterProfileCallback, callback type is 7
+[EVENT] PROFILING(8,python):2024-10-11-09:11:26.345.587 [msprof_callback_impl.cpp:350] >>> (tid:8) Started to register profiling enable host freq callback.
+[INFO] PROFILING(8,python):2024-10-11-09:11:26.345.592 [prof_atls_plugin.cpp:83] >>> (tid:8) RegisterProfileCallback, callback type is 8
+[INFO] TDT(8,python):2024-10-11-09:11:33.623.560 [client_manager.cpp:397][IsHostEnvironment][tid:8] [TsdClient] logicDeviceId is [0], hostaicpunum[0]
+[INFO] TDT(8,python):2024-10-11-09:11:33.623.620 [client_manager.cpp:426][GetClientRunMode][tid:8] runningMode:0
+[INFO] TDT(8,python):2024-10-11-09:11:33.623.627 [client_manager.cpp:104][GetInstance][tid:8] curmode:1
+[INFO] TDT(8,python):2024-10-11-09:11:33.623.757 [process_mode_manager.cpp:135][OpenProcess][tid:8] [ProcessModeManager] enter into open process deviceId[0] rankSize[0]
+[INFO] TDT(8,python):2024-10-11-09:11:33.634.506 [process_mode_manager.cpp:496][InitTsdClient][tid:8] [TsdClient] deviceId[0] begin to init hdc client
+[INFO] TDT(8,python):2024-10-11-09:11:33.634.621 [version_verify.cpp:36][SetVersionInfo][tid:8] VersionVerify: send client version to server
+[INFO] TDT(8,python):2024-10-11-09:11:33.634.673 [version_verify.cpp:52][SetVersionInfo][tid:8] send feature_info:{msg_type:35, features:{check before send aicpu package,}}
+[INFO] TDT(8,python):2024-10-11-09:11:33.634.682 [version_verify.cpp:52][SetVersionInfo][tid:8] send feature_info:{msg_type:37, features:{check before send open qs message,}}
+[INFO] TDT(8,python):2024-10-11-09:11:33.634.688 [version_verify.cpp:52][SetVersionInfo][tid:8] send feature_info:{msg_type:64, features:{get check code retry,}}
+[INFO] TDT(8,python):2024-10-11-09:11:33.634.982 [version_verify.cpp:68][PeerVersionCheck][tid:8] VersionVerify: Check client version info, server[1230], client[1230]
+[INFO] TDT(8,python):2024-10-11-09:11:33.634.994 [version_verify.cpp:89][ParseVersionInfo][tid:8] VersionVerify: pass client version info success
+[INFO] TDT(8,python):2024-10-11-09:11:33.634.999 [hdc_client.cpp:275][CheckHdcConnection][tid:8] Service[2] create hdc success
+[INFO] TDT(8,python):2024-10-11-09:11:33.635.012 [version_verify.cpp:122][SpecialFeatureCheck][tid:8] VersionVerify: new type[35], supported
+[INFO] TDT(8,python):2024-10-11-09:11:33.635.069 [process_mode_manager.cpp:858][GetDeviceCheckCodeOnce][tid:8] [TsdClient][deviceId=0] [sessionId=1] wait package info respond
+[INFO] TDT(8,python):2024-10-11-09:11:33.635.184 [version_verify.cpp:128][SpecialFeatureCheck][tid:8] VersionVerify: msgType[64] not supported, please check and update you software
+[INFO] TDT(8,python):2024-10-11-09:11:33.635.225 [process_mode_manager.cpp:387][SendAICPUPackageSimple][tid:8] [TsdClient][deviceId=0] hostCheckCode[54027234] no equal to deviceCheckCode[0], begin send file[/usr/local/Ascend/ascend-toolkit/latest/opp/Ascend/aicpu/Ascend-aicpu_syskernels.tar.gz] to [/home/HwHiAiUser/hdcd/device0/3642694_Ascend-aicpu_syskernels.tar.gz]
+[INFO] TDT(8,python):2024-10-11-09:11:33.704.918 [process_mode_manager.cpp:396][SendAICPUPackageSimple][tid:8] [TsdClient][deviceId=0] hdc send file[/usr/local/Ascend/ascend-toolkit/latest/opp/Ascend/aicpu/Ascend-aicpu_syskernels.tar.gz] to [/home/HwHiAiUser/hdcd/device0/3642694_Ascend-aicpu_syskernels.tar.gz] success
+[INFO] TDT(8,python):2024-10-11-09:11:33.704.967 [process_mode_manager.cpp:2075][SendExtendPackage][tid:8] device not support extend pkg skip send
+[INFO] TDT(8,python):2024-10-11-09:11:33.704.982 [process_mode_manager.cpp:496][InitTsdClient][tid:8] [TsdClient] deviceId[0] begin to init hdc client
+[INFO] TDT(8,python):2024-10-11-09:11:33.705.109 [version_verify.cpp:36][SetVersionInfo][tid:8] VersionVerify: send client version to server
+[INFO] TDT(8,python):2024-10-11-09:11:33.705.125 [version_verify.cpp:52][SetVersionInfo][tid:8] send feature_info:{msg_type:35, features:{check before send aicpu package,}}
+[INFO] TDT(8,python):2024-10-11-09:11:33.705.132 [version_verify.cpp:52][SetVersionInfo][tid:8] send feature_info:{msg_type:37, features:{check before send open qs message,}}
+[INFO] TDT(8,python):2024-10-11-09:11:33.705.139 [version_verify.cpp:52][SetVersionInfo][tid:8] send feature_info:{msg_type:64, features:{get check code retry,}}
+[INFO] TDT(8,python):2024-10-11-09:11:33.714.914 [version_verify.cpp:68][PeerVersionCheck][tid:8] VersionVerify: Check client version info, server[1230], client[1230]
+[INFO] TDT(8,python):2024-10-11-09:11:33.714.926 [version_verify.cpp:89][ParseVersionInfo][tid:8] VersionVerify: pass client version info success
+[INFO] TDT(8,python):2024-10-11-09:11:33.714.932 [hdc_client.cpp:275][CheckHdcConnection][tid:8] Service[2] create hdc success
+[INFO] TDT(8,python):2024-10-11-09:11:33.714.941 [process_mode_manager.cpp:543][ConstructOpenMsg][tid:8] [TsdClient] tsd get process sign successfully, procpid[3642694] signSize[48]
+[INFO] TDT(8,python):2024-10-11-09:11:33.714.951 [version_verify.cpp:114][SpecialFeatureCheck][tid:8] VersionVerify: previous type[6], supported
+[INFO] TDT(8,python):2024-10-11-09:11:33.714.967 [process_mode_manager.cpp:152][OpenProcess][tid:8] [ProcessModeManager] deviceId[0] sessionId[1] rankSize[0], wait sub process start respond
+[INFO] TDT(8,python):2024-10-11-09:11:36.834.024 [stub_process_mode_nowin.cpp:63][ProcessQueueForMdc][tid:8] [TsdClient] it is unnecessary of current mode[0] chiptype[5] to grant queue auth to aicpusd
+[INFO] TDT(8,python):2024-10-11-09:11:36.834.110 [stub_process_mode_nowin.cpp:101][OpenInHost][tid:8] enter into OpenInHost deviceid[0]
+[INFO] TDT(8,python):2024-10-11-09:11:36.834.141 [client_manager.cpp:397][IsHostEnvironment][tid:8] [TsdClient] logicDeviceId is [0], hostaicpunum[0]
+[INFO] TDT(8,python):2024-10-11-09:11:36.834.149 [stub_process_mode_nowin.cpp:105][OpenInHost][tid:8] host cpu not support
+[INFO] TDT(8,python):2024-10-11-09:11:36.834.154 [process_mode_manager.cpp:186][OpenProcess][tid:8] [TsdClient][deviceId=0] [sessionId=1] start hccp and computer process success
+[INFO] RUNTIME(8,python):2024-10-11-09:11:36.837.103 [device.cc:343] 8 Init: isAddrFlat:0
+[INFO] TDT(8,python):2024-10-11-09:11:36.837.736 [tsd_client.cpp:182][TsdCapabilityGet][tid:8] TsdCapabilityGet Begin.
+[INFO] TDT(8,python):2024-10-11-09:11:36.837.748 [process_mode_manager.cpp:1287][CapabilityGet][tid:8] [ProcessModeManager] enter into CapabilityGet process deviceId[0] type[0]
+[INFO] TDT(8,python):2024-10-11-09:11:36.837.761 [version_verify.cpp:114][SpecialFeatureCheck][tid:8] VersionVerify: previous type[38], supported
+[INFO] TDT(8,python):2024-10-11-09:11:36.837.808 [process_mode_manager.cpp:1310][CapabilityGet][tid:8] [TsdClient][deviceId=0] [sessionId=1] [type=0]send capability success 
+[INFO] TDT(8,python):2024-10-11-09:11:36.837.971 [process_mode_manager.cpp:769][PidQosMsgProc][tid:8] [TsdClient] PidQosMsgProc recvMsg realDeviceId[0] msgType[39] localDevId[0] rspCode[0],pidqos[1]
+[INFO] TDT(8,python):2024-10-11-09:11:36.837.980 [process_mode_manager.cpp:1315][CapabilityGet][tid:8] [TsdClient][logicDeviceId_=0][type=0][pidQos=1][ret=0]recv capability respond finish
+[INFO] RUNTIME(8,python):2024-10-11-09:11:36.870.007 [npu_driver.cc:5589] 175 GetDeviceStatus: GetDeviceStatus status=1.
+[INFO] ATRACE(8,python):2024-10-11-09:11:36.871.623 [tracer_mgr_operate.c:66](tid:8) create object RUNTIME_ATRACE_DEV0_TS0 success, exitSave(false).
+[INFO] TDT(8,python):2024-10-11-09:11:36.871.657 [client_manager.cpp:164][SetProfilingCallback][tid:8] [TsdClient] set profiling callback success
+[INFO] GE(8,python):2024-10-11-09:11:36.898.364 [ge_api.cc:172][status:INIT]8 GEInitializeImpl:GEInitialize start
+[INFO] GE(8,python):2024-10-11-09:11:36.898.423 [ge_api.cc:186][EVENT]8 GEInitializeImpl:[GEPERFTRACE] The time cost of GEInitialize::GEAPICheckSupportedGlobalOptions is [45] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:36.908.616 [ge_api.cc:203][EVENT]8 GEInitializeImpl:[GEPERFTRACE] The time cost of GEInitialize::CheckOptionsValid is [168] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.110.844 [ge_api.cc:218][EVENT]8 GEInitializeImpl:[GEPERFTRACE] The time cost of GEInitialize::ManagerInitialize is [201352] micro second.
+[INFO] PROFILING(8,python):2024-10-11-09:11:37.111.036 [prof_atls_plugin.cpp:160] >>> (tid:8) Module[45] register callback of ctrl handle.
+[EVENT] PROFILING(8,python):2024-10-11-09:11:37.111.083 [msprof_callback_impl.cpp:89] >>> (tid:8) MsprofCtrlCallback called, type: 255
+[EVENT] PROFILING(8,python):2024-10-11-09:11:37.111.387 [ai_drv_dev_api.cpp:333] >>> (tid:8) Succeeded to DrvGetApiVersion version: 0x72313
+[INFO] GE(8,python):2024-10-11-09:11:37.111.594 [ge_api.cc:233][EVENT]8 GEInitializeImpl:[GEPERFTRACE] The time cost of GEInitialize::InitProfiling is [719] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.158.653 [ge_api.cc:243][EVENT]8 GEInitializeImpl:[GEPERFTRACE] The time cost of GEInitialize::InitPreparation is [46957] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.158.679 [gelib.cc:91][EVENT]8 Initialize:[GEPERFTRACE] GE Init Start
+[INFO] GE(8,python):2024-10-11-09:11:37.158.758 [gelib.cc:157][EVENT]8 Initialize:[GEPERFTRACE] The time cost of GELib::InitializePrepare is [71] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.159.068 [gelib.cc:312][EVENT]8 SystemInitialize:Online infer init GELib success, device id :0 
+[INFO] GE(8,python):2024-10-11-09:11:37.159.078 [gelib.cc:184][EVENT]8 InnerInitialize:[GEPERFTRACE] The time cost of InnerInitialize::SystemInitialize is [40] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.237.438 [process_node_engine_manager.cc:63][EVENT]8 Initialize:[GEPERFTRACE] The time cost of ProcessNodeEngineManager::Initialize[HOST_CPU] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.237.462 [process_node_engine_manager.cc:63][EVENT]8 Initialize:[GEPERFTRACE] The time cost of ProcessNodeEngineManager::Initialize[NPU] is [4] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.237.470 [process_node_engine_manager.cc:63][EVENT]8 Initialize:[GEPERFTRACE] The time cost of ProcessNodeEngineManager::Initialize[PS] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.237.477 [process_node_engine_manager.cc:63][EVENT]8 Initialize:[GEPERFTRACE] The time cost of ProcessNodeEngineManager::Initialize[UDF] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.237.486 [gelib.cc:208][EVENT]8 InnerInitialize:[GEPERFTRACE] The time cost of InnerInitialize::ProcessNodeEngine is [3447] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.467 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetDNNEngineObjs] in [libengine.so] is [89] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.480 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[AIcoreEngine] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.489 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[DNN_HCCL] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.496 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[DNN_VM_AICPU] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.503 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[DNN_VM_AICPU_ASCEND] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.510 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[DNN_VM_AICPU_ASCEND_FFTS_PLUS] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.516 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[DNN_VM_AICPU_FFTS_PLUS] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.523 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[DNN_VM_DVPP] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.529 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[DNN_VM_GE_LOCAL] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.534 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[DNN_VM_HOST_CPU] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.540 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[DNN_VM_RTS] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.547 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[DNN_VM_RTS_FFTS_PLUS] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.553 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[DSAEngine] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.559 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[VectorEngine] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.238.565 [dnnengine_manager.cc:128][EVENT]8 Initialize:[GEPERFTRACE] The time cost of DNNEngineManager::Initialize[ffts_plus] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.239.007 [gelib.cc:219][EVENT]8 InnerInitialize:[GEPERFTRACE] The time cost of InnerInitialize::EngineInitialize is [1514] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.242.345 [op_tiling_manager.cc:102][EVENT]8 ~FuncPerfScope:[GEPERFTRACE] The time cost of OpTilingManager::LoadSo is [3157] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.483.973 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libfe.so] is [241558] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.486.054 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libge_local_engine.so] is [1941] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.500.589 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/librts_engine.so] is [14469] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.507.615 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libaicpu_ascend_engine.so] is [6959] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.508.177 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libhost_cpu_engine.so] is [507] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.530.150 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libaicpu_tf_engine.so] is [21911] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.564.390 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libffts.so] is [34172] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.567.591 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libdvpp_engine.so] is [3115] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.568.677 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/libhcom_graph_adaptor.so] is [1038] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.568.701 [ops_kernel_manager.cc:78][EVENT]8 Initialize:[GEPERFTRACE] The time cost of OpsKernelManager::LoadPluginManagerSo is [326341] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.569.018 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [Initialize] in [libaicpu_ascend_engine.so] is [298] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.569.231 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [Initialize] in [libaicpu_tf_engine.so] is [200] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:37.569.262 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [Initialize] in [libdvpp_engine.so] is [20] micro second.
+[INFO] ATRACE(8,python):2024-10-11-09:11:37.569.324 [tracer_mgr_operate.c:66](tid:8) create object FE_Global_Trace success, exitSave(false).
+[INFO] ATRACE(8,python):2024-10-11-09:11:37.569.344 [tracer_mgr_operate.c:66](tid:8) create object FE_Statistics_Trace success, exitSave(false).
+[INFO] TUNE(8,python):2024-10-11-09:11:37.575.773 [cann_kb_pyfunc_mgr.cpp:72][CANNKB][Tid:8]"CannKbPyfuncMgr: Enter PyObjectInit, reference_ is 0!"
+[INFO] TUNE(8,python):2024-10-11-09:11:37.575.796 [handle_manager.cpp:115][CANNKB][Tid:8]"Start to run init functions to load dynamic python lib!"
+[INFO] TUNE(8,python):2024-10-11-09:11:37.575.858 [handle_manager.cpp:407][CANNKB][Tid:8]"Init functions of loading dynamic python lib end!"
+[INFO] TUNE(8,python):2024-10-11-09:11:37.575.865 [cann_kb_pyfunc_mgr.cpp:24][CANNKB][Tid:8]"CANN_KB_Py has already been initialized."
+[INFO] TUNE(8,python):2024-10-11-09:11:37.575.960 [cann_kb_pyfunc_mgr.cpp:117][CANNKB][Tid:8]"CannKbPyfuncMgr: Run PyObjectInit successfully!"
+[INFO] GE(8,python):2024-10-11-09:11:38.768.219 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [Initialize] in [libfe.so] is [1198946] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.965.504 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [Initialize] in [libffts.so] is [197207] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.965.578 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [Initialize] in [libge_local_engine.so] is [39] micro second.
+[INFO] HCCL(8,python):2024-10-11-09:11:38.965.626 [plugin_manager.cc:42][8]hcom running normal mode.
+[INFO] GE(8,python):2024-10-11-09:11:38.965.880 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [Initialize] in [libhcom_graph_adaptor.so] is [292] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.116 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [Initialize] in [libhost_cpu_engine.so] is [225] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.212 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [Initialize] in [librts_engine.so] is [87] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.296 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetOpsKernelInfoStores] in [libaicpu_ascend_engine.so] is [74] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.334 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetOpsKernelInfoStores] in [libaicpu_tf_engine.so] is [29] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.357 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetOpsKernelInfoStores] in [libdvpp_engine.so] is [16] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.394 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetOpsKernelInfoStores] in [libfe.so] is [29] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.402 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetOpsKernelInfoStores] in [libffts.so] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.419 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetOpsKernelInfoStores] in [libge_local_engine.so] is [10] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.467 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetOpsKernelInfoStores] in [libhcom_graph_adaptor.so] is [41] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.488 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetOpsKernelInfoStores] in [libhost_cpu_engine.so] is [12] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.526 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetOpsKernelInfoStores] in [librts_engine.so] is [30] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.557 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetGraphOptimizerObjs] in [libaicpu_ascend_engine.so] is [22] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.568 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetGraphOptimizerObjs] in [libaicpu_tf_engine.so] is [4] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.586 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetGraphOptimizerObjs] in [libdvpp_engine.so] is [10] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.614 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetGraphOptimizerObjs] in [libfe.so] is [20] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.630 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetGraphOptimizerObjs] in [libffts.so] is [7] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.664 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetGraphOptimizerObjs] in [libge_local_engine.so] is [26] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.693 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetGraphOptimizerObjs] in [libhcom_graph_adaptor.so] is [21] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.710 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetGraphOptimizerObjs] in [libhost_cpu_engine.so] is [10] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.724 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetGraphOptimizerObjs] in [librts_engine.so] is [6] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.739 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetCompositeEngines] in [libaicpu_ascend_engine.so] is [6] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.747 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetCompositeEngines] in [libaicpu_tf_engine.so] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.754 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetCompositeEngines] in [libdvpp_engine.so] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.762 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetCompositeEngines] in [libfe.so] is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.869 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetCompositeEngines] in [libffts.so] is [100] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.878 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetCompositeEngines] in [libge_local_engine.so] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.888 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetCompositeEngines] in [libhcom_graph_adaptor.so] is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.895 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetCompositeEngines] in [libhost_cpu_engine.so] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.901 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetCompositeEngines] in [librts_engine.so] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.908 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetFFTSPlusSwitch] in [libaicpu_ascend_engine.so] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.915 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetFFTSPlusSwitch] in [libaicpu_tf_engine.so] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.922 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetFFTSPlusSwitch] in [libdvpp_engine.so] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.928 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetFFTSPlusSwitch] in [libfe.so] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.961 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetFFTSPlusSwitch] in [libffts.so] is [25] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.969 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetFFTSPlusSwitch] in [libge_local_engine.so] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.977 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetFFTSPlusSwitch] in [libhcom_graph_adaptor.so] is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.984 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetFFTSPlusSwitch] in [libhost_cpu_engine.so] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.990 [dnnengine_manager.cc:41][EVENT]8 ~InvokeFuncPerfRecorder:[GEPERFTRACE] The time cost of InvokeAll [GetFFTSPlusSwitch] in [librts_engine.so] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.966.999 [ops_kernel_manager.cc:153][EVENT]8 InitOpKernelInfoStores:[GEPERFTRACE] The time cost of InitOpKernelInfoStores::Initialize[AIcoreEngine] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.967.105 [ops_kernel_manager.cc:153][EVENT]8 InitOpKernelInfoStores:[GEPERFTRACE] The time cost of InitOpKernelInfoStores::Initialize[DNN_VM_GE_LOCAL_OP_STORE] is [97] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.980.297 [ops_kernel_manager.cc:153][EVENT]8 InitOpKernelInfoStores:[GEPERFTRACE] The time cost of InitOpKernelInfoStores::Initialize[DNN_VM_HOST_CPU_OP_STORE] is [13183] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.980.386 [ops_kernel_manager.cc:153][EVENT]8 InitOpKernelInfoStores:[GEPERFTRACE] The time cost of InitOpKernelInfoStores::Initialize[DNN_VM_RTS_FFTS_PLUS_OP_STORE] is [73] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.980.461 [ops_kernel_manager.cc:153][EVENT]8 InitOpKernelInfoStores:[GEPERFTRACE] The time cost of InitOpKernelInfoStores::Initialize[DNN_VM_RTS_OP_STORE] is [64] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:38.980.470 [ops_kernel_manager.cc:153][EVENT]8 InitOpKernelInfoStores:[GEPERFTRACE] The time cost of InitOpKernelInfoStores::Initialize[DSAEngine] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.359.010 [ops_kernel_manager.cc:153][EVENT]8 InitOpKernelInfoStores:[GEPERFTRACE] The time cost of InitOpKernelInfoStores::Initialize[aicpu_ascend_kernel] is [378527] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.511.660 [ops_kernel_manager.cc:153][EVENT]8 InitOpKernelInfoStores:[GEPERFTRACE] The time cost of InitOpKernelInfoStores::Initialize[aicpu_tf_kernel] is [152617] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.527.305 [ops_kernel_manager.cc:153][EVENT]8 InitOpKernelInfoStores:[GEPERFTRACE] The time cost of InitOpKernelInfoStores::Initialize[dvpp_ops_kernel] is [15609] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.527.327 [ops_kernel_manager.cc:153][EVENT]8 InitOpKernelInfoStores:[GEPERFTRACE] The time cost of InitOpKernelInfoStores::Initialize[ops_kernel_info_hccl] is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.527.337 [graph_builder.cc:102][EVENT]8 ~FuncPerfScope:[GEPERFTRACE] The time cost of OpsKernelManager::InitOpKernelInfoStores is [560339] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.529.910 [ops_kernel_manager.cc:174][EVENT]8 InitOpsKernelInfo:[GEPERFTRACE] The time cost of InitOpsKernelInfo::GetAllOpsKernelInfo[AIcoreEngine] is [2563] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.530.493 [ops_kernel_manager.cc:174][EVENT]8 InitOpsKernelInfo:[GEPERFTRACE] The time cost of InitOpsKernelInfo::GetAllOpsKernelInfo[DNN_VM_GE_LOCAL_OP_STORE] is [27] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.530.596 [ops_kernel_manager.cc:174][EVENT]8 InitOpsKernelInfo:[GEPERFTRACE] The time cost of InitOpsKernelInfo::GetAllOpsKernelInfo[DNN_VM_HOST_CPU_OP_STORE] is [49] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.530.671 [ops_kernel_manager.cc:174][EVENT]8 InitOpsKernelInfo:[GEPERFTRACE] The time cost of InitOpsKernelInfo::GetAllOpsKernelInfo[DNN_VM_RTS_FFTS_PLUS_OP_STORE] is [21] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.530.700 [ops_kernel_manager.cc:174][EVENT]8 InitOpsKernelInfo:[GEPERFTRACE] The time cost of InitOpsKernelInfo::GetAllOpsKernelInfo[DNN_VM_RTS_OP_STORE] is [13] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.530.752 [ops_kernel_manager.cc:174][EVENT]8 InitOpsKernelInfo:[GEPERFTRACE] The time cost of InitOpsKernelInfo::GetAllOpsKernelInfo[DSAEngine] is [24] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.531.072 [ops_kernel_manager.cc:174][EVENT]8 InitOpsKernelInfo:[GEPERFTRACE] The time cost of InitOpsKernelInfo::GetAllOpsKernelInfo[aicpu_ascend_kernel] is [306] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.531.749 [ops_kernel_manager.cc:174][EVENT]8 InitOpsKernelInfo:[GEPERFTRACE] The time cost of InitOpsKernelInfo::GetAllOpsKernelInfo[aicpu_tf_kernel] is [274] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.532.158 [ops_kernel_manager.cc:174][EVENT]8 InitOpsKernelInfo:[GEPERFTRACE] The time cost of InitOpsKernelInfo::GetAllOpsKernelInfo[dvpp_ops_kernel] is [11] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.532.270 [ops_kernel_manager.cc:174][EVENT]8 InitOpsKernelInfo:[GEPERFTRACE] The time cost of InitOpsKernelInfo::GetAllOpsKernelInfo[ops_kernel_info_hccl] is [85] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.532.828 [graph_builder.cc:102][EVENT]8 ~FuncPerfScope:[GEPERFTRACE] The time cost of OpsKernelManager::InitOpsKernelInfo is [5482] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.707.511 [ops_kernel_manager.cc:245][EVENT]8 InitGraphOptimizers:[GEPERFTRACE] The time cost of InitGraphOptimizers::Initialize[AIcoreEngine] is [174665] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.708.619 [ops_kernel_manager.cc:245][EVENT]8 InitGraphOptimizers:[GEPERFTRACE] The time cost of InitGraphOptimizers::Initialize[DNN_VM_HOST_CPU_OPTIMIZER] is [1070] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.708.655 [ops_kernel_manager.cc:245][EVENT]8 InitGraphOptimizers:[GEPERFTRACE] The time cost of InitGraphOptimizers::Initialize[DNN_VM_RTS_FFTS_PLUS_GRAPH_OPTIMIZER_STORE] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.708.665 [ops_kernel_manager.cc:245][EVENT]8 InitGraphOptimizers:[GEPERFTRACE] The time cost of InitGraphOptimizers::Initialize[DNN_VM_RTS_GRAPH_OPTIMIZER_STORE] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.708.674 [ops_kernel_manager.cc:245][EVENT]8 InitGraphOptimizers:[GEPERFTRACE] The time cost of InitGraphOptimizers::Initialize[DSAEngine] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.710.824 [ops_kernel_manager.cc:245][EVENT]8 InitGraphOptimizers:[GEPERFTRACE] The time cost of InitGraphOptimizers::Initialize[aicpu_ascend_optimizer] is [2141] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.712.901 [ops_kernel_manager.cc:245][EVENT]8 InitGraphOptimizers:[GEPERFTRACE] The time cost of InitGraphOptimizers::Initialize[aicpu_tf_optimizer] is [2062] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.712.959 [ops_kernel_manager.cc:245][EVENT]8 InitGraphOptimizers:[GEPERFTRACE] The time cost of InitGraphOptimizers::Initialize[dvpp_graph_optimizer] is [18] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.061 [ops_kernel_manager.cc:245][EVENT]8 InitGraphOptimizers:[GEPERFTRACE] The time cost of InitGraphOptimizers::Initialize[ffts_plus] is [90] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.072 [ops_kernel_manager.cc:245][EVENT]8 InitGraphOptimizers:[GEPERFTRACE] The time cost of InitGraphOptimizers::Initialize[ge_local_graph_optimizer] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.107 [ops_kernel_manager.cc:245][EVENT]8 InitGraphOptimizers:[GEPERFTRACE] The time cost of InitGraphOptimizers::Initialize[hccl_alltoallvc_fusion_optimizer] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.126 [ops_kernel_manager.cc:245][EVENT]8 InitGraphOptimizers:[GEPERFTRACE] The time cost of InitGraphOptimizers::Initialize[hccl_graph_optimizer] is [8] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.134 [graph_builder.cc:102][EVENT]8 ~FuncPerfScope:[GEPERFTRACE] The time cost of OpsKernelManager::InitGraphOptimizers is [180296] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.143 [ops_kernel_manager.cc:365][EVENT]8 ClassifyGraphOptimizers:[GEPERFTRACE] The time cost of ClassifyGraphOptimizers::GetAttributes[AIcoreEngine] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.152 [ops_kernel_manager.cc:365][EVENT]8 ClassifyGraphOptimizers:[GEPERFTRACE] The time cost of ClassifyGraphOptimizers::GetAttributes[DNN_VM_HOST_CPU_OPTIMIZER] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.160 [ops_kernel_manager.cc:365][EVENT]8 ClassifyGraphOptimizers:[GEPERFTRACE] The time cost of ClassifyGraphOptimizers::GetAttributes[DNN_VM_RTS_FFTS_PLUS_GRAPH_OPTIMIZER_STORE] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.168 [ops_kernel_manager.cc:365][EVENT]8 ClassifyGraphOptimizers:[GEPERFTRACE] The time cost of ClassifyGraphOptimizers::GetAttributes[DNN_VM_RTS_GRAPH_OPTIMIZER_STORE] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.176 [ops_kernel_manager.cc:365][EVENT]8 ClassifyGraphOptimizers:[GEPERFTRACE] The time cost of ClassifyGraphOptimizers::GetAttributes[DSAEngine] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.182 [ops_kernel_manager.cc:365][EVENT]8 ClassifyGraphOptimizers:[GEPERFTRACE] The time cost of ClassifyGraphOptimizers::GetAttributes[aicpu_ascend_optimizer] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.189 [ops_kernel_manager.cc:365][EVENT]8 ClassifyGraphOptimizers:[GEPERFTRACE] The time cost of ClassifyGraphOptimizers::GetAttributes[aicpu_tf_optimizer] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.197 [ops_kernel_manager.cc:365][EVENT]8 ClassifyGraphOptimizers:[GEPERFTRACE] The time cost of ClassifyGraphOptimizers::GetAttributes[dvpp_graph_optimizer] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.204 [ops_kernel_manager.cc:365][EVENT]8 ClassifyGraphOptimizers:[GEPERFTRACE] The time cost of ClassifyGraphOptimizers::GetAttributes[ffts_plus] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.211 [ops_kernel_manager.cc:365][EVENT]8 ClassifyGraphOptimizers:[GEPERFTRACE] The time cost of ClassifyGraphOptimizers::GetAttributes[ge_local_graph_optimizer] is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.217 [ops_kernel_manager.cc:365][EVENT]8 ClassifyGraphOptimizers:[GEPERFTRACE] The time cost of ClassifyGraphOptimizers::GetAttributes[hccl_alltoallvc_fusion_optimizer] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.224 [ops_kernel_manager.cc:365][EVENT]8 ClassifyGraphOptimizers:[GEPERFTRACE] The time cost of ClassifyGraphOptimizers::GetAttributes[hccl_graph_optimizer] is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.713.231 [graph_builder.cc:102][EVENT]8 ~FuncPerfScope:[GEPERFTRACE] The time cost of OpsKernelManager::ClassifyGraphOptimizers is [89] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.714.342 [proto_util.cc:102][EVENT]8 ~FuncPerfScope:[GEPERFTRACE] The time cost of ReadProtoFromText::/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/optimizer_priority.pbtxt is [796] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.714.371 [graph_builder.cc:102][EVENT]8 ~FuncPerfScope:[GEPERFTRACE] The time cost of OpsKernelManager::InitGraphOptimizerPriority is [1134] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.714.467 [gelib.cc:231][EVENT]8 InnerInitialize:[GEPERFTRACE] The time cost of InnerInitialize::OpsManagerInitialize is [2475448] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.716.663 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libge_local_opskernel_builder.so] is [2071] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.719.193 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libhost_cpu_opskernel_builder.so] is [2409] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.719.351 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/librts_engine.so] is [45] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.719.518 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libaicpu_ascend_engine.so] is [31] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.719.618 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libaicpu_tf_engine.so] is [27] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.719.746 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libdvpp_engine.so] is [42] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.720.497 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libhcom_opskernel_builder.so] is [643] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.724.627 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libhvd_opskernel_builder.so] is [3974] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.728.122 [plugin_manager.cc:629][EVENT]8 LoadSoWithFlags:[GEPERFTRACE] The time cost of PluginManager::Dlopen[/usr/local/Ascend/ascend-toolkit/8.0.RC2/aarch64-linux/lib64/plugin/opskernel/libhcom_gradtune_opskernel_builder.so] is [3350] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.729.630 [gelib.cc:243][EVENT]8 InnerInitialize:[GEPERFTRACE] The time cost of InnerInitialize::OpsKernelBuilderManager is [15151] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.738.914 [gelib.cc:254][EVENT]8 InnerInitialize:[GEPERFTRACE] The time cost of InnerInitialize::HostCpuEngineInitialize is [9268] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.739.029 [gelib.cc:265][EVENT]8 InnerInitialize:[GEPERFTRACE] The time cost of InnerInitialize::AnalyzerInitialize is [93] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.739.041 [gelib.cc:168][EVENT]8 Initialize:[GEPERFTRACE] The time cost of GELib::Initialize is [2580273] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.739.054 [ge_api.cc:249][EVENT]8 GEInitializeImpl:[GEPERFTRACE] The time cost of GEInitialize::GELibInitialize is [2580376] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.739.091 [ge_api.cc:265][EVENT]8 GEInitializeImpl:[GEPERFTRACE] The time cost of InnerInitialize::SessionManagerInitialize is [27] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.757.927 [op_tiling_manager.cc:102][EVENT]8 ~FuncPerfScope:[GEPERFTRACE] The time cost of OpTilingManager::LoadSo is [18799] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.889.318 [ge_api.cc:282][EVENT]8 GEInitializeImpl:[GEPERFTRACE] The time cost of GeExecutor::Initialize is [150216] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.889.436 [ge_api.cc:285][EVENT]8 GEInitializeImpl:[GEPERFTRACE] The time cost of InitializeExecutionRuntime is [43] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.889.444 [ge_api.cc:291][status:STOP]8 GEInitializeImpl:GEInitialize finished
+[INFO] GE(8,python):2024-10-11-09:11:39.889.450 [ge_api.cc:292][EVENT]8 GEInitializeImpl:[GEPERFTRACE] The time cost of GEInitialize::All is [2991089] micro second.
+[INFO] GE(8,python):2024-10-11-09:11:39.889.600 [ge_api.cc:447][status:INIT]8 Session:Start to construct session.
+[INFO] GE(8,python):2024-10-11-09:11:39.890.284 [graph_var_manager.cc:1585][EVENT]8 SetMemoryMallocSize:Total memory size is 65464696832
+[INFO] GE(8,python):2024-10-11-09:11:39.890.295 [graph_var_manager.cc:1564][EVENT]8 SetAllMemoryMaxValue:The graph_mem_max_size is 53190066176 and the var_mem_max_size is 10228858880
+[INFO] GE(8,python):2024-10-11-09:11:39.902.638 [ge_api.cc:469][status:STOP]8 Session:Session construct finished, session id is 0
+[INFO] PROFILING(8,python):2024-10-11-09:11:39.913.049 [prof_atls_plugin.cpp:160] >>> (tid:8) Module[48] register callback of ctrl handle.
+[EVENT] PROFILING(8,python):2024-10-11-09:11:39.913.185 [msprof_callback_impl.cpp:89] >>> (tid:8) MsprofCtrlCallback called, type: 255
+[EVENT] PROFILING(8,python):2024-10-11-09:11:39.913.195 [ai_drv_dev_api.cpp:333] >>> (tid:8) Succeeded to DrvGetApiVersion version: 0x72313
+[INFO] GE(8,python):2024-10-11-09:11:39.913.460 [ge_api.cc:172][status:INIT]8 GEInitializeImpl:GEInitialize start
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.324 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.503 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.535 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.563 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.591 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.617 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.644 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.670 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.697 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.743 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.774 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.803 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.820 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.179.996 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.180.162 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.180.346 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.180.512 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.180.679 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.180.705 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.180.731 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.180.748 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.180.784 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.180.812 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.180.983 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.181.150 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.181.336 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.181.509 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.181.690 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.181.864 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.182.039 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.182.209 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.182.385 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.182.553 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.182.731 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.182.759 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.182.944 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.183.108 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.183.281 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.183.447 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.183.472 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.183.498 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.183.527 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.183.549 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.183.748 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.183.917 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.183.950 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.184.044 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.184.071 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.184.097 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.184.122 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.184.287 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.184.460 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.184.624 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.184.788 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.184.814 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.184.996 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.185.171 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.185.258 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.185.276 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.185.292 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.185.306 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.185.323 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.185.348 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.185.364 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.185.535 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.185.715 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.185.884 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.186.293 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.186.704 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.187.111 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.187.521 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.187.539 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.189.472 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.191.414 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.192.404 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.193.381 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.194.362 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.195.341 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.200.964 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.206.440 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.206.945 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.207.439 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.207.955 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.498 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.523 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.549 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.569 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.585 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.604 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.645 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.752 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.843 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.860 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.883 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.898 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.913 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.932 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.955 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.208.971 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.001 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.015 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.032 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.054 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.072 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.100 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.117 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.132 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.149 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.163 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.236 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.319 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.389 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.409 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.424 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.438 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.469 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.499 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.513 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.541 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.569 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.594 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.610 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.627 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.209.641 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.210.231 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.210.826 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.211.410 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.211.428 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.213.730 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.216.021 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.218.312 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.220.636 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.220.732 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.220.825 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.220.884 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.220.939 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.220.994 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.221.048 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.221.412 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.221.640 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.221.853 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.221.927 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.223.606 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.223.635 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:13:28.223.651 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] GE(8,python):2024-10-11-09:13:28.253.086 [scalable_config.cc:72][EVENT]618 ScalableConfig:device total max size: 65464696832, page_mem_size_total_threshold: 62191461990, uncacheable_size_threshold: 34359738368
+[INFO] GE(8,python):2024-10-11-09:13:28.361.354 [graph_var_manager.cc:1564][EVENT]618 SetAllMemoryMaxValue:The graph_mem_max_size is 27917287424 and the var_mem_max_size is 5368709120
+[INFO] GE(8,python):2024-10-11-09:13:28.361.434 [graph_manager.cc:1255][EVENT]618 PreRun:PreRun start: graph node size 6, session id 1, graph id 0, graph name online.
+[INFO] ATRACE(8,python):2024-10-11-09:13:28.361.526 [atrace_client_core.c:143](tid:618) devId[64] is for host aicpu, no need to create a thread.
+[INFO] ATRACE(8,python):2024-10-11-09:13:28.361.709 [tracer_mgr_operate.c:66](tid:618) create object RUNTIME_ATRACE_DEV64_TS0 success, exitSave(false).
+[INFO] GE(8,python):2024-10-11-09:13:28.361.966 [parallel_partitioner.cc:147][EVENT]618 DoPipelinePartition:[GEPERFTRACE] The time cost of OptimizeSubgraph::PipelinePartition is [32] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.361.991 [parallel_partitioner.cc:160][EVENT]618 DoFlowGraphPartition:[GEPERFTRACE] The time cost of OptimizeSubgraph::FlowGraphPartition is [12] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.363.181 [graph_prepare.cc:1368][EVENT]618 Init:[GEPERFTRACE] The time cost of FileConstantUtils::ConvertFileConstToConst is [1157] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.363.312 [graph_manager.cc:1059][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::stages.preparer.PrepareInit is [1302] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.363.329 [graph_manager.cc:1061][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::stages.optimizer.HandleSummaryOp is [7] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.363.524 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ForToWhilePass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:28.363.545 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of ProcessNetOutput::SavePass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.363.612 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of ProcessNetOutput::NetOutputPass is [58] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.363.621 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of ProcessNetOutput::DataPass is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.363.734 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of CreateSubGraphWithScopePass is [33] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.363.743 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of SubgraphMultiDimsClonePass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.363.756 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of MultiBatchClonePass is [6] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.363.866 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of SplitVariableIntoSubgraphPass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:28.363.879 [graph_manager.cc:1063][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::stages.preparer.NormalizeGraph is [542] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.371.098 [graph_manager.cc:1064][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::stages.optimizer.OptimizeGraphInit is [7209] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:28.372.701 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of AssertPass is [2] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:28.372.714 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of SwitchDeadBranchElimination is [5] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:28.372.721 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of MergePass is [4] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:28.372.726 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of InferShapePass is [556] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:28.372.732 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ReplaceWithEmptyConstPass is [17] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:28.372.738 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of SplitShapeNPass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:28.372.743 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of DimensionComputePass is [23] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:28.372.748 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ConstantClipPass is [0] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:28.372.753 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ConstantFoldingPass is [20] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:28.372.759 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of InferValuePass is [9] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.786.067 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of AssertPass is [6] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.786.097 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of SwitchDeadBranchElimination is [7] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.786.104 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of MergePass is [4] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.786.110 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of InferShapePass is [573] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.786.116 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ReplaceWithEmptyConstPass is [19] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.786.121 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of SplitShapeNPass is [2] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.786.126 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of DimensionComputePass is [19] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.786.131 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ConstantClipPass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.786.136 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ConstantFoldingPass is [18] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.786.141 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of InferValuePass is [10] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.788.040 [graph_manager.cc:1065][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::stages.optimizer.OptimizeOriginalGraphForQuantize is [6416925] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.788.094 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of CondRemovePass is [2] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.788.104 [graph_prepare.cc:2001][EVENT]618 PrepareDynShape:[GEPERFTRACE] The time cost of Prepare::ProcessBeforeInfershape is [46] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.788.807 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of AssertPass is [3] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.788.819 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of SwitchDeadBranchElimination is [3] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.788.826 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of MergePass is [2] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.788.831 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of InferShapePass is [426] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.788.837 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ReplaceWithEmptyConstPass is [13] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.788.842 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of SplitShapeNPass is [3] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.788.847 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of DimensionComputePass is [9] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.788.852 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ConstantClipPass is [2] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.788.857 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ConstantFoldingPass is [12] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.788.862 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of InferValuePass is [4] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.788.882 [graph_prepare.cc:2002][EVENT]618 PrepareDynShape:[GEPERFTRACE] The time cost of Prepare::FormatAndShapeProcess is [769] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.788.901 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of PreRun::MarkForceUnknownForCondPass is [4] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.788.909 [graph_prepare.cc:2003][EVENT]618 PrepareDynShape:[GEPERFTRACE] The time cost of Prepare::CtrlFlowPreProcess is [19] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.788.919 [graph_prepare.cc:2004][EVENT]618 PrepareDynShape:[GEPERFTRACE] The time cost of Prepare::multibatch::GetDynamicOutputShape is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.788.945 [graph_prepare.cc:2005][EVENT]618 PrepareDynShape:[GEPERFTRACE] The time cost of Prepare::InsertAippOpUtil::Instance().UpdateDataNodeByAipp is [17] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.788.953 [graph_prepare.cc:2006][EVENT]618 PrepareDynShape:[GEPERFTRACE] The time cost of Prepare::SaveOriginalGraphToOmModel is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.788.965 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of PrepareOptimize::ShapeOperateOpRemovePass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.788.973 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of PrepareOptimize::ReplaceTransShapePass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.788.985 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of PrepareOptimize::MarkAgnosticPass is [5] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.789.098 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of EnterPass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.106 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of CondPass is [4] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.112 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of PrintOpPass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.117 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of NoUseReshapeRemovePass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.122 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of DropOutPass is [0] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.128 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of AssertPass is [3] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.133 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of TransposeRemovePass is [2] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.138 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of UnusedConstPass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.144 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of StopGradientPass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.149 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of PreventGradientPass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.154 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of PlaceholderWithDefaultPass is [4] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.159 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of SnapshotPass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.164 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of GuaranteeConstPass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.169 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of VarIsInitializedOpPass is [8] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.174 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ParallelConcatStartOpPass is [2] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.179 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of IdentityPass is [3] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.789.196 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of PrepareOptimize::PrunePass is [8] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.789.206 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of PrepareOptimize::HcclMemcpyPass is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.789.242 [graph_prepare.cc:2007][EVENT]618 PrepareDynShape:[GEPERFTRACE] The time cost of Prepare::PrepareOptimize is [283] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.789.250 [graph_manager.cc:1074][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::stages.preparer.PrepareDynShape is [1192] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.804.742 [graph_manager.cc:1086][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::stages.optimizer.OptimizeOriginalGraph is [15473] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.804.794 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of PrepareRunningFormatRefiner::VariablePrepareOpPass is [7] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.804.835 [graph_manager.cc:1089][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::stages.preparer.PrepareRunningFormatRefiner is [74] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.584 [graph_manager.cc:1090][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::stages.optimizer.OptimizeOriginalGraphJudgeInsert is [5738] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.609 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of SubexpressionMigrationPass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.620 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of UnusedArgsCleanPass is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.628 [graph_manager.cc:1091][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::SubexpressionMigration is [27] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.660 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::MergeInputMemcpyPass is [5] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.671 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::SwitchDataEdgesBypass is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.681 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::ConstantFuseSamePass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.699 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::CSEBeforeFuseDataNodesWithCommonInputPass is [11] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.709 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::FuseDataNodesWithCommonInputPass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.719 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::CommonSubexpressionEliminationPass is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.730 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::PermutePass is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.777 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::SameTransdataBreadthFusionPass is [39] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.795 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::VariableOpPass is [10] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.820 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::TransOpWithoutReshapeFusionPass is [18] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.864 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::TransOpBreadthFusionPass is [37] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.881 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::DataFlowPreparePass is [9] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.890 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_1::MergeUnknownShapeNPass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.810.896 [graph_manager.cc:2707][EVENT]618 OptimizeStage1:[GEPERFTRACE] The time cost of GraphManager::OptimizeStage1_1 is [243] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.056 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of EnterPass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.063 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of AddNPass is [2] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.069 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of SwitchDeadBranchElimination is [2] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.074 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of SwitchLogicRemovePass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.080 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of MergePass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.085 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of CastRemovePass is [13] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.090 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of TransposeTransDataPass is [3] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.096 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ReshapeRemovePass is [2] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.101 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of TransOpSymmetryEliminationPass is [4] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.106 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of TransOpNearbyAllreduceFusionPass is [4] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.111 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ReplaceWithEmptyConstPass is [8] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.116 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of DimensionComputePass is [8] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.121 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ConstantClipPass is [1] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.126 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ConstantFoldingPass is [12] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.131 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of DimensionAdjustPass is [4] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.135 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of UselessControlOutRemovePass is [3] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.142 [graph_manager.cc:2750][EVENT]618 OptimizeStage1:[GEPERFTRACE] The time cost of GraphManager::OptimizeStage1_2 is [232] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.148 [graph_manager.cc:2761][EVENT]618 OptimizeStage1:[GEPERFTRACE] The time cost of extern constant folding is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.164 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::Migration is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.171 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::ArgsClean is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.186 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::PrunePass is [9] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.198 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::NextIterationPass is [4] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.206 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::ControlTriggerPass is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.214 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::MergeToStreamMergePass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.231 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::SwitchToStreamSwitchPass is [9] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.243 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::AttachStreamLabelPass is [5] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.251 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::MultiBatchPass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.259 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::SubgraphMultiDimsPass is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.268 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::IteratorOpPass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.276 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::VariableRefUselessControlOutDeletePass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.292 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::ReshapeRecoveryPass is [10] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.306 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::RemoveSameConstPass is [6] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.314 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::HcclMemcpyPass is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.326 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage1_3::AttachedResourcePass is [5] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.332 [graph_manager.cc:2824][EVENT]618 OptimizeStage1:[GEPERFTRACE] The time cost of GraphManager::OptimizeStage1_3 is [171] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.359 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of IdentityPass is [3] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:13:34.811.366 [graph_manager.cc:2835][EVENT]618 OptimizeStage1:[GEPERFTRACE] The time cost of GraphPrepare::node_pass is [29] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.387 [graph_manager.cc:1098][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::OptimizeStage1 is [740] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.495 [graph_manager.cc:1099][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::stages.optimizer.OptimizeAfterStage1 is [98] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.524 [graph_manager.cc:1100][EVENT]618 PreRunOptimizeOriginalGraph:[GEPERFTRACE] The time cost of GraphManager::GraphUtilsEx::InferShapeInNeed is [18] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.536 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of PreRun::CtrlEdgeTransferPass is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.543 [graph_manager.cc:1105][EVENT]618 PreRunOptimizeOriginalGraph:PreRun:PreRunOptimizeOriginalGraph success.
+[INFO] GE(8,python):2024-10-11-09:13:34.811.558 [graph_manager.cc:3341][EVENT]618 OptimizeSubgraph:[GEPERFTRACE] The time cost of OptimizeSubgraph::StagePartition is [4] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.816.054 [engine_place.cc:164][EVENT]618 Run:The time cost of AIcoreEngine::CheckSupported is [2303] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.816.073 [engine_place.cc:164][EVENT]618 Run:The time cost of DNN_VM_GE_LOCAL_OP_STORE::CheckSupported is [151] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.816.080 [engine_place.cc:164][EVENT]618 Run:The time cost of DNN_VM_RTS_OP_STORE::CheckSupported is [11] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.816.868 [graph_manager.cc:3353][EVENT]618 OptimizeSubgraph:[GEPERFTRACE] The time cost of OptimizeSubgraph::EnginePlacer1 is [5301] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.817.036 [graph_manager.cc:3365][EVENT]618 OptimizeSubgraph:[GEPERFTRACE] The time cost of OptimizeSubgraph::GraphPartitionDynamicShape is [148] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.817.060 [graph_manager.cc:3371][EVENT]618 OptimizeSubgraph:[GEPERFTRACE] The time cost of OptimizeSubgraph::EnginePlacer2 is [16] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.817.074 [graph_manager.cc:3384][EVENT]618 OptimizeSubgraph:[GEPERFTRACE] The time cost of OptimizeSubgraph::SubgraphPartitionAndOptimization::CompositeEngine is [5] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.817.175 [engine_partitioner.cc:1130][EVENT]618 PartitionSubGraph:[GEPERFTRACE] The time cost of EnginePartitioner::PartitionInitialize is [21] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.817.188 [engine_partitioner.cc:1137][EVENT]618 PartitionSubGraph:[GEPERFTRACE] The time cost of EnginePartitioner::PartitionMarkClusters is [5] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.817.558 [engine_partitioner.cc:1143][EVENT]618 PartitionSubGraph:[GEPERFTRACE] The time cost of EnginePartitioner::PartitionSplitSubGraphs is [363] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.817.623 [engine_partitioner.cc:1150][EVENT]618 PartitionSubGraph:[GEPERFTRACE] The time cost of EnginePartitioner::PartitionSortSubGraphs is [55] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.817.663 [engine_partitioner.cc:1159][EVENT]618 PartitionSubGraph:[GEPERFTRACE] The time cost of EnginePartitioner::PartitionAddPartitionsToGraphNode is [33] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.817.688 [graph_manager.cc:3425][EVENT]618 SubgraphPartitionAndOptimization:[GEPERFTRACE] The time cost of OptimizeSubgraph::Partition1 is [604] micro second.
+[INFO] GE(8,python):2024-10-11-09:13:34.817.705 [graph_manager.cc:3432][EVENT]618 SubgraphPartitionAndOptimization:[GEPERFTRACE] The time cost of OptimizeSubgraph::SetSubgraphPreProc is [9] micro second.
+[INFO] ATRACE(8,python):2024-10-11-09:13:34.819.246 [tracer_mgr_operate.c:66](tid:683) create object FE_CompileTd_6 success, exitSave(false).
+[INFO] GE(8,python):2024-10-11-09:14:33.801.358 [graph_manager.cc:3442][EVENT]618 SubgraphPartitionAndOptimization:[GEPERFTRACE] The time cost of OptimizeSubgraph::SetSubGraph is [58983641] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.801.417 [graph_manager.cc:3448][EVENT]618 SubgraphPartitionAndOptimization:[GEPERFTRACE] The time cost of OptimizeSubgraph::SetSubgraphPostProc is [22] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.397 [graph_manager.cc:3487][EVENT]618 SubgraphPartitionAndOptimization:[GEPERFTRACE] The time cost of OptimizeSubgraph::MergeSubGraph is [2957] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.416 [graph_manager.cc:3397][EVENT]618 OptimizeSubgraph:[GEPERFTRACE] The time cost of OptimizeSubgraph::SubgraphPartitionAndOptimization::AtomicEngine is [58987333] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.429 [graph_manager.cc:1114][EVENT]618 PreRunOptimizeSubGraph:[GEPERFTRACE] The time cost of GraphManager::OptimizeSubgraph is [58992877] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.438 [graph_manager.cc:1123][EVENT]618 PreRunOptimizeSubGraph:PreRun:PreRunOptimizeSubGraph success.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.460 [graph_manager.cc:1138][EVENT]618 PreRunAfterOptimizeSubGraph:[GEPERFTRACE] The time cost of GraphManager::stages.optimizer.ReplacePrecompiledNodeWithOmGraph is [8] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.525 [graph_manager.cc:1139][EVENT]618 PreRunAfterOptimizeSubGraph:[GEPERFTRACE] The time cost of GraphManager::stages.optimizer.OptimizeWholeGraph is [54] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.559 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::AfterMergePasses::LinkGenMaskNodesPass is [16] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.575 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::HcclContinuousMemcpyPass is [8] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.581 [graph_manager.cc:2851][EVENT]618 OptimizeStage2:[GEPERFTRACE] The time cost of OptimizeStage2::AfterMergePasses is [45] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.717 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ConstantFoldingPass is [27] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:14:33.804.725 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of ReshapeRemovePass is [2] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:14:33.804.732 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of CondRemovePass is [4] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:14:33.804.737 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of BitcastPass is [0] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:14:33.804.743 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of AssignRemovePass is [4] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:14:33.804.748 [base_pass.cc:332][EVENT]618 Run:[GEPERFTRACE] The time cost of DimensionAdjustPass is [16] micro second, call num is [6]
+[INFO] GE(8,python):2024-10-11-09:14:33.804.755 [graph_manager.cc:2878][EVENT]618 OptimizeStage2:[GEPERFTRACE] The time cost of OptimizeStage2::MergedGraphNameToPasses is [162] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.765 [graph_manager.cc:2886][EVENT]618 OptimizeStage2:[GEPERFTRACE] The time cost of OptimizeStage2::RemoveIsolatedConst is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.781 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::ControlAttrOptimize::MultiBatchPass is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.791 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::AfterMergePasses::RefIdentityDeleteOpPass is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.804 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::AfterMergePasses::VariableRefDeleteOpPass is [6] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.816 [compile_nodes_pass.cc:81][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::ControlAttrOptimize::CompileNodesPass is [4] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.823 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::ControlAttrOptimize::CompileNodesPass is [13] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.831 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::AfterMergePasses::SwapSpacePass is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.940 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::AfterMergePasses::InputOutputConnectionIdentifyPass is [102] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.979 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::AfterMergePasses::AtomicAddrCleanPass is [31] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.804.989 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::AfterMergePasses::EndOfSequenceAddControlPass is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.805.000 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::ControlAttrOptimize::SubgraphPass is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.805.014 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::ControlAttrOptimize::AttachStreamLabelPass is [6] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.805.021 [graph_manager.cc:2941][EVENT]618 OptimizeStage2:[GEPERFTRACE] The time cost of OptimizeStage2::ControlAttrOptimize is [244] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.805.028 [graph_manager.cc:2951][EVENT]618 OptimizeStage2:[GEPERFTRACE] The time cost of ModelBuilder::AssignFunctionalLabels is [2] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.805.036 [graph_manager.cc:2957][EVENT]618 OptimizeStage2:[GEPERFTRACE] The time cost of MemcpyAddrAsyncPass::Run. is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.805.043 [graph_manager.cc:2964][EVENT]618 OptimizeStage2:[GEPERFTRACE] The time cost of BufferPoolMemoryPass::Run. is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.817.640 [graph_manager.cc:2972][EVENT]618 OptimizeStage2:[GEPERFTRACE] The time cost of ParallelGroupPass::Run. is [68] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.817.682 [graph_manager.cc:1140][EVENT]618 PreRunAfterOptimizeSubGraph:[GEPERFTRACE] The time cost of GraphManager::OptimizeStage2 is [13148] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.819.784 [graph_manager.cc:1143][EVENT]618 PreRunAfterOptimizeSubGraph:[GEPERFTRACE] The time cost of GraphManager::GetCompilerStages(graph_node->GetGraphId()).optimizer.OptimizeGraphBeforeBuild is [2090] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.819.844 [graph_manager.cc:2992][EVENT]618 MemConflictProc:[GEPERFTRACE] The time cost of HandleMemoryRWConflict is [45] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.819.875 [graph_manager.cc:2998][EVENT]618 MemConflictProc:[GEPERFTRACE] The time cost of MemLayoutConflictOptimizer::Run. is [20] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.819.891 [pass_manager.cc:75][EVENT]618 Run:[GEPERFTRACE] The time cost of OptimizeStage2::SetFftsPlusAttrPass is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.819.898 [graph_manager.cc:3003][EVENT]618 MemConflictProc:[GEPERFTRACE] The time cost of SetFftsPlusAttrPass::last_passes.Run is [14] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.819.904 [graph_manager.cc:1144][EVENT]618 PreRunAfterOptimizeSubGraph:[GEPERFTRACE] The time cost of GraphManager::MemConflictProc is [106] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.820.101 [graph_manager.cc:3612][EVENT]618 Build:[GEPERFTRACE] The time cost of GraphManager::RecoverIrDefinitionAndModifyAippData is [157] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.820.129 [graph_mem_assigner.cc:102][EVENT]618 ~FuncPerfScope:[GEPERFTRACE] The time cost of GraphMemoryAssigner::AssignVarMemory is [7] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.820.232 [engine_partitioner.cc:1130][EVENT]618 PartitionSubGraph:[GEPERFTRACE] The time cost of EnginePartitioner::PartitionInitialize is [32] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.820.244 [engine_partitioner.cc:1137][EVENT]618 PartitionSubGraph:[GEPERFTRACE] The time cost of EnginePartitioner::PartitionMarkClusters is [3] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.820.429 [engine_partitioner.cc:1143][EVENT]618 PartitionSubGraph:[GEPERFTRACE] The time cost of EnginePartitioner::PartitionSplitSubGraphs is [178] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.820.465 [engine_partitioner.cc:1150][EVENT]618 PartitionSubGraph:[GEPERFTRACE] The time cost of EnginePartitioner::PartitionSortSubGraphs is [28] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.820.503 [engine_partitioner.cc:1159][EVENT]618 PartitionSubGraph:[GEPERFTRACE] The time cost of EnginePartitioner::PartitionAddPartitionsToGraphNode is [30] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.820.526 [graph_builder.cc:939][EVENT]618 SecondPartition:[GEPERFTRACE] The time cost of EnginePartitioner::Partition2 is [358] micro second.
+[INFO] RUNTIME(8,python):2024-10-11-09:14:33.820.984 [logger.cc:1042] 618 ModelBindStream: model_id=1344, stream_id=320, flag=0.
+[INFO] GE(8,python):2024-10-11-09:14:33.821.007 [task_generator.cc:801][EVENT]618 GenerateTask:[GEPERFTRACE] The time cost of TaskGenerator::SetStreamCtx is [69] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.821.070 [task_generator.cc:802][EVENT]618 GenerateTask:[GEPERFTRACE] The time cost of TaskGenerator::PrepareForGenerateTask is [55] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.822.309 [task_generator.cc:811][EVENT]618 GenerateTask:[GEPERFTRACE] The time cost of TaskGenerator::DoGenerateTask is [1229] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.822.319 [task_generator.cc:960][EVENT]618 GetTaskInfo:[GEPERFTRACE] The time cost of TaskGenerator::GenerateTask is [1382] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.822.358 [task_generator.cc:973][EVENT]618 GetTaskInfo:[GEPERFTRACE] The time cost of TaskGenerator::AddModelTaskToModel is [21] micro second.
+[INFO] RUNTIME(8,python):2024-10-11-09:14:33.822.370 [logger.cc:1054] 618 ModelUnbindStream: model_id=1344, stream_id=320.
+[INFO] GE(8,python):2024-10-11-09:14:33.822.706 [graph_builder.cc:102][EVENT]618 ~FuncPerfScope:[GEPERFTRACE] The time cost of GraphBuilder::Build is [2592] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.822.722 [graph_manager.cc:1160][EVENT]618 PreRunAfterOptimizeSubGraph:[GEPERFTRACE] The time cost of GraphManager::Build is [2786] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.822.732 [graph_manager.cc:1172][EVENT]618 PreRunAfterOptimizeSubGraph:PreRun:PreRunAfterOptimizeSubGraph success.
+[INFO] ATRACE(8,python):2024-10-11-09:14:33.823.059 [tracer_mgr_operate.c:248](tid:618) destory object RUNTIME_ATRACE_DEV64_TS0, exitSave(false).
+[INFO] ATRACE(8,python):2024-10-11-09:14:33.823.069 [atrace_client_core.c:176](tid:618) it's for host aicpu, devId=64.
+[INFO] GE(8,python):2024-10-11-09:14:33.823.291 [graph_manager.cc:1278][EVENT]618 PreRun:[GEPERFTRACE] The time cost of FlowModelBuild is [65461445] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.823.299 [graph_manager.cc:1279][EVENT]618 PreRun:[GEPERFTRACE] GE PreRun End
+[INFO] GE(8,python):2024-10-11-09:14:33.830.398 [model_converter.cc:484][EVENT]618 CollectAndReserveStreamResource:Model online_0 require reusable stream num is 1 attached stream num is 0 event num is 0 notify num is 0.
+[INFO] GE(8,python):2024-10-11-09:14:33.833.391 [graph_converter.cc:1078][EVENT]618 ConvertComputeGraphToExecuteGraph:[GEPERFTRACE] The time cost of ConvertComputeGraphToExecuteGraph::CreateMainNode is [2638] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.833.477 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of ZeroCopy is [68] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.833.996 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of CEM is [508] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.221 [copy_flow_launch_fuse.cc:492][EVENT]618 Run:[GEPERFTRACE] The time cost of Pass::CopyFlowLaunchFuse is [212] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.230 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of CopyFlowLaunch is [223] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.329 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of TrustOutTensor is [91] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.338 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of AicpuFuseHostInputs is [1] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.356 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of ZeroCopy is [10] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.503 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of CEM is [141] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.553 [copy_flow_launch_fuse.cc:492][EVENT]618 Run:[GEPERFTRACE] The time cost of Pass::CopyFlowLaunchFuse is [41] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.560 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of CopyFlowLaunch is [49] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.574 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of TrustOutTensor is [8] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.580 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of AicpuFuseHostInputs is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.594 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of ZeroCopy is [8] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.646 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of CEM is [46] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.688 [copy_flow_launch_fuse.cc:492][EVENT]618 Run:[GEPERFTRACE] The time cost of Pass::CopyFlowLaunchFuse is [36] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.695 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of CopyFlowLaunch is [42] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.708 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of TrustOutTensor is [8] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.714 [base_optimizer.cc:63][EVENT]618 Run:[GEPERFTRACE] The time cost of AicpuFuseHostInputs is [0] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.724 [graph_converter.cc:1089][EVENT]618 ConvertComputeGraphToExecuteGraph:[GEPERFTRACE] The time cost of ConvertComputeGraphToExecuteGraph::RunAllPass is [1318] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.834.843 [graph_converter.cc:1093][EVENT]618 ConvertComputeGraphToExecuteGraph:[GEPERFTRACE] The time cost of ConvertComputeGraphToExecuteGraph::TopologicalSorting is [113] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.835.235 [graph_converter.cc:1104][EVENT]618 ConvertComputeGraphToExecuteGraph:[GEPERFTRACE] The time cost of ConvertComputeGraphToExecuteGraph::ExecuteGraphAdapter is [383] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.836.201 [graph_converter.cc:1108][EVENT]618 ConvertComputeGraphToExecuteGraph:[GEPERFTRACE] The time cost of ConvertComputeGraphToExecuteGraph::AppendGraphLevelData is [956] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.836.355 [graph_converter.cc:1113][EVENT]618 ConvertComputeGraphToExecuteGraph:[GEPERFTRACE] The time cost of ConvertComputeGraphToExecuteGraph::CalculatePriority is [141] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.836.378 [graph_converter.cc:1119][EVENT]618 ConvertComputeGraphToExecuteGraph:[GEPERFTRACE] The time cost of ConvertComputeGraphToExecuteGraph::All is [5818] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.836.706 [model_v2_executor_builder.cc:108][EVENT]618 Build:[GEPERFTRACE] The time cost of ModelV2ExecutorBuilderBuild::ConstructEquivalentAnchors is [276] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.836.749 [model_v2_executor_builder.cc:112][EVENT]618 Build:[GEPERFTRACE] The time cost of ModelV2ExecutorBuilderBuild::AllocRootGraphAnyValues is [31] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.836.780 [model_v2_executor_builder.cc:116][EVENT]618 Build:[GEPERFTRACE] The time cost of ModelV2ExecutorBuilderBuild::ReadInBuffer is [23] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.836.794 [model_v2_executor_builder.cc:121][EVENT]618 Build:[GEPERFTRACE] The time cost of ModelV2ExecutorBuilderBuild::ReadInComputeNodeInfo is [7] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.836.828 [model_v2_executor_builder.cc:126][EVENT]618 Build:[GEPERFTRACE] The time cost of ModelV2ExecutorBuilderBuild::ReadInKernelExtendInfo is [28] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.836.866 [model_v2_executor_builder.cc:131][EVENT]618 Build:[GEPERFTRACE] The time cost of ModelV2ExecutorBuilderBuild::ReadInModelDesc is [31] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.837.550 [model_v2_executor_builder.cc:163][EVENT]618 Build:[GEPERFTRACE] The time cost of ModelV2ExecutorBuilderBuild::BuildGraph is [676] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.837.836 [model_v2_executor_builder.cc:178][EVENT]618 Build:[GEPERFTRACE] The time cost of ModelV2ExecutorBuilderBuild::SubscribersSchedulerInit is [251] micro second.
+[INFO] GE(8,python):2024-10-11-09:14:33.837.847 [model_v2_executor_builder.cc:179][EVENT]618 Build:[GEPERFTRACE] The time cost of ModelV2ExecutorBuilderBuild::All is [1424] micro second.
+[INFO] RUNTIME(8,python):2024-10-11-09:14:33.918.000 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:14:33.918.208 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:14:33.918.407 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:14:33.918.584 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:14:33.918.774 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:14:33.918.944 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:14:33.919.097 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:14:33.919.255 [elf.cc:451] 620 ParaseElfStackInfoHeader: Check elf version is not match, elfVersion=1.
+[INFO] RUNTIME(8,python):2024-10-11-09:15:03.363.064 [runtime.cc:5618] 801 SetWatchDogDevStatus: There is errInfo of devId=0, tsId=0
