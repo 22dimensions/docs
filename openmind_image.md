@@ -1,17 +1,17 @@
-# openMind模型社区背后的技术揭秘：镜像创新实践
+# openMind背后的技术揭秘：镜像创新实践
 
-## 一、openMind模型社区
+## 一、openMind
 
-[openMind模型社区](https://modelers.cn/)是一站式大模型平台，原生支持昇腾NPU处理器，集成了openMind Library和openMind Hub Clinet等工具套件，模型库、数据集和体验空间等核心组件，覆盖了自然语言处理、视觉、音频等领域。致力于打造开放共享的人工智能生态社区，提供首发原生模型、易用开发工具、丰富生态资源，帮助每一位开发者获取领先的人工智能技术，打造出更有竞争力和差异化的模型及应用。它提供下面的工具以及服务：
+[openMind](https://modelers.cn/)是一款应用使能开发套件，原生支持昇腾NPU处理器，为各大模型社区提供支持，提供海量模型/数据托管能力、在线推理体验服务，还支持接入内容审核、病毒扫描等服务，可以帮助平台伙伴快速构建社区。同时，openMind应用使能工具链还能提供模型训练、微调、评估、推理等全流程开发能力、开发者通过简单的API即可实现微调、推理等任务，极大缩短开发周期。具体来说，它提供下面的工具以及服务：
 
-- [openMind工具链](https://modelers.cn/docs/zh/openmind-library/overview.html)：openMind Library是一个深度学习开发套件，通过简单易用的API支持模型预训练、微调、推理等流程。openMind Library通过一套接口兼容PyTorch和MindSpore等主流框架，同时原生支持昇腾NPU处理器。
+- [openMind应用使能工具链](https://modelers.cn/docs/zh/openmind-library/overview.html)：openMind Library是一个深度学习开发套件，通过简单易用的API支持模型预训练、微调、推理等流程。openMind Library通过一套接口兼容PyTorch和MindSpore等主流框架，同时原生支持昇腾NPU处理器。
 - [模型](https://modelers.cn/models)：托管用于自然语言学习、视觉和音频等任务的模型。
 	- [模型CI](https://modelers.cn/docs/zh/community/models/verifying_models.html)：模型可用性测试旨在验证用户基于本文档编写的自定义推理用例在NPU上执行是否通过。
 - [数据集](https://modelers.cn/datasets)：托管用于翻译、语音识别和图像分类等任务的数据集，包含生成训练、评估和测试所需的数据。
 - [体验空间](https://modelers.cn/spaces)：提供机器学习和深度学习算法的应用案例，在浏览器即可演示模型的交互式应用程序。除了在线的服务，我们还支持用户一键离线部署复现体验空间。
 - [镜像中心](https://modelers.cn/images)：镜像仓库，为昇腾以及openMind用户提供常用的镜像，快速构建和部署AI应用，或进行二次开发。
 
-为了降低开发者使用门槛，满足用户开箱即用的体验，支撑openMind服务高效运行，统一的镜像起到了关键作用。
+为了降低开发者使用门槛，满足用户开箱即用的体验，支撑openMind高效运行，统一的镜像起到了关键作用。
 
 ## 二、镜像分层构建
 
